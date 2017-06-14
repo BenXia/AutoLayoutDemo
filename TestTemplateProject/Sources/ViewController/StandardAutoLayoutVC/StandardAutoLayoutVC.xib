@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StandardAutoLayoutVC">
+            <connections>
+                <outlet property="ageLabel" destination="b6H-6V-nTV" id="6w3-wd-HSu"/>
+                <outlet property="avatorImageView" destination="IfR-tz-IdP" id="8Dh-mj-ll3"/>
+                <outlet property="avatorTopConstraint" destination="Zm3-8h-Y0s" id="59n-3D-H3K"/>
+                <outlet property="avatorWidthConstraint" destination="9Kc-75-9br" id="NkY-3T-5jN"/>
+                <outlet property="descriptionLabel" destination="w7c-JD-jPS" id="ThZ-ck-ube"/>
+                <outlet property="gradeLabel" destination="Qb4-9l-kIW" id="O5s-ni-qa0"/>
+                <outlet property="nameLabel" destination="oJ7-o5-L3W" id="akM-Sq-Opj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picD" translatesAutoresizingMaskIntoConstraints="NO" id="IfR-tz-IdP">
+                    <rect key="frame" x="8" y="72" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="9Kc-75-9br"/>
+                        <constraint firstAttribute="width" secondItem="IfR-tz-IdP" secondAttribute="height" multiplier="1:1" id="duC-yK-Jt3"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名：张三" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJ7-o5-L3W">
+                    <rect key="frame" x="116" y="71" width="186" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="186" id="2ML-Pt-PHl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年级：高一" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb4-9l-kIW">
+                    <rect key="frame" x="116" y="110" width="186" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年龄：17" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6H-6V-nTV">
+                    <rect key="frame" x="116" y="150" width="186" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7c-JD-jPS" userLabel="详细介绍">
+                    <rect key="frame" x="8" y="179" width="359" height="0.0"/>
+                    <color key="backgroundColor" red="0.22352941179999999" green="0.41568627450000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="b6H-6V-nTV" firstAttribute="leading" secondItem="IfR-tz-IdP" secondAttribute="trailing" constant="8" id="7yc-6t-bzR"/>
+                <constraint firstItem="IfR-tz-IdP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="8Nx-UD-9dt"/>
+                <constraint firstItem="Qb4-9l-kIW" firstAttribute="leading" secondItem="IfR-tz-IdP" secondAttribute="trailing" constant="8" id="9uO-gd-rum"/>
+                <constraint firstAttribute="centerX" secondItem="w7c-JD-jPS" secondAttribute="centerX" id="Cfz-GH-tve"/>
+                <constraint firstItem="oJ7-o5-L3W" firstAttribute="leading" secondItem="IfR-tz-IdP" secondAttribute="trailing" constant="8" id="DkS-fe-K8q"/>
+                <constraint firstItem="oJ7-o5-L3W" firstAttribute="width" secondItem="Qb4-9l-kIW" secondAttribute="width" id="IRL-i7-Fll"/>
+                <constraint firstItem="w7c-JD-jPS" firstAttribute="top" secondItem="IfR-tz-IdP" secondAttribute="bottom" constant="7" id="UPV-Wm-78T"/>
+                <constraint firstItem="IfR-tz-IdP" firstAttribute="leading" secondItem="w7c-JD-jPS" secondAttribute="leading" id="Wph-4X-QEe"/>
+                <constraint firstItem="IfR-tz-IdP" firstAttribute="bottom" secondItem="b6H-6V-nTV" secondAttribute="bottom" constant="1" id="Zd3-c9-CTP"/>
+                <constraint firstItem="IfR-tz-IdP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="Zm3-8h-Y0s"/>
+                <constraint firstItem="Qb4-9l-kIW" firstAttribute="width" secondItem="b6H-6V-nTV" secondAttribute="width" id="h8r-dC-9xp"/>
+                <constraint firstItem="IfR-tz-IdP" firstAttribute="centerY" secondItem="Qb4-9l-kIW" secondAttribute="centerY" constant="1.5" id="m9B-IQ-VTU"/>
+                <constraint firstItem="IfR-tz-IdP" firstAttribute="top" secondItem="oJ7-o5-L3W" secondAttribute="top" constant="1" id="yeU-Bd-IpK"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="w7c-JD-jPS" secondAttribute="bottom" constant="8" id="zxl-qa-sCG"/>
+            </constraints>
+            <point key="canvasLocation" x="585" y="437"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="picD" width="230" height="219"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

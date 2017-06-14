@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StandardAutoLayoutViewVC">
+            <connections>
+                <outlet property="customView" destination="AHx-zc-jTs" id="ibE-XQ-Dfo"/>
+                <outlet property="customViewHeightConstraint" destination="wcy-Or-YIZ" id="KMD-37-vVW"/>
+                <outlet property="customViewWidthConstraint" destination="tDr-Ai-hE0" id="zbe-U1-2Re"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHx-zc-jTs" customClass="CustomiseDemoView">
+                    <rect key="frame" x="87.5" y="133.5" width="200" height="400"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="tDr-Ai-hE0"/>
+                        <constraint firstAttribute="height" constant="400" id="wcy-Or-YIZ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTU-C7-Qnb">
+                    <rect key="frame" x="94" y="619" width="188" height="30"/>
+                    <state key="normal" title="切换样式">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickChangeStyleButtonAction:" destination="-1" eventType="touchUpInside" id="Yye-UW-EyS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VTU-C7-Qnb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="94" id="6EN-0L-Hbk"/>
+                <constraint firstAttribute="centerX" secondItem="VTU-C7-Qnb" secondAttribute="centerX" constant="-0.5" id="V75-qU-j4p"/>
+                <constraint firstAttribute="centerX" secondItem="AHx-zc-jTs" secondAttribute="centerX" id="dWU-WV-3CV"/>
+                <constraint firstAttribute="centerY" secondItem="AHx-zc-jTs" secondAttribute="centerY" id="htt-mk-H1D"/>
+                <constraint firstAttribute="bottom" secondItem="VTU-C7-Qnb" secondAttribute="bottom" constant="18" id="wc7-vS-Lz4"/>
+            </constraints>
+            <point key="canvasLocation" x="585" y="451"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

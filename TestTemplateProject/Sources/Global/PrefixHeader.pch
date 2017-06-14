@@ -1,0 +1,27 @@
+//
+//  PrefixHeader.pch
+//  TestTemplateProject
+//
+//  Created by Ben on 15/7/16.
+//  Copyright (c) 2015年 Ben. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "ReactiveCocoa.h"
+#import "Masonry.h"
+#import "KeyboardManager.h"
+#import "commonConstDef.h"
+#import "typedef.h"
+#import "macrodef.h"
+#import "Utility.h"
+#import "UIView+Helper.h"
+#import "NSString+Size.h"
+#import "BNNavigationController.h"
+#import "BNTabBarController.h"
+
+#endif /* PrefixHeader_pch */

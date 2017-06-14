@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7706"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutoLayoutVC">
+            <connections>
+                <outlet property="topConstraint" destination="gxM-2g-nTB" id="88e-8Y-aal"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewA" destination="O4A-8o-eCS" id="0PG-eF-ar4"/>
+                <outlet property="viewB" destination="0Z7-vr-TWk" id="Q6L-OO-EB1"/>
+                <outlet property="viewC" destination="MLV-HR-c7f" id="P7h-u8-QOg"/>
+                <outlet property="viewD" destination="leM-l3-6Qa" id="FUo-Ao-he0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4A-8o-eCS" userLabel="viewA">
+                    <rect key="frame" x="10" y="10" width="173" height="200"/>
+                    <color key="backgroundColor" red="0.22352941179999999" green="0.41568627450000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="96Z-K4-IGQ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Z7-vr-TWk" userLabel="viewB">
+                    <rect key="frame" x="192" y="10" width="173" height="57"/>
+                    <color key="backgroundColor" red="0.98823529409999999" green="0.3921568627" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLV-HR-c7f" userLabel="viewC">
+                    <rect key="frame" x="192" y="77" width="173" height="133"/>
+                    <color key="backgroundColor" red="0.8957870751" green="0.81783753390000002" blue="0.9040354505" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="leM-l3-6Qa" userLabel="viewD">
+                    <rect key="frame" x="10" y="220" width="355" height="437"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="437" id="dW8-ef-VuD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0Z7-vr-TWk" firstAttribute="width" secondItem="MLV-HR-c7f" secondAttribute="width" id="2ya-H1-zxu"/>
+                <constraint firstItem="O4A-8o-eCS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="40b-d1-OFx"/>
+                <constraint firstItem="0Z7-vr-TWk" firstAttribute="top" secondItem="O4A-8o-eCS" secondAttribute="top" id="Cc2-DJ-bmU"/>
+                <constraint firstItem="O4A-8o-eCS" firstAttribute="bottom" secondItem="MLV-HR-c7f" secondAttribute="bottom" id="ILz-JV-12t"/>
+                <constraint firstAttribute="bottom" secondItem="leM-l3-6Qa" secondAttribute="bottom" constant="10" id="J6V-dh-ZDQ"/>
+                <constraint firstItem="0Z7-vr-TWk" firstAttribute="width" secondItem="O4A-8o-eCS" secondAttribute="width" id="KLD-Wt-0GZ"/>
+                <constraint firstItem="0Z7-vr-TWk" firstAttribute="height" secondItem="MLV-HR-c7f" secondAttribute="height" multiplier="3/7" id="O74-sS-hQm"/>
+                <constraint firstItem="leM-l3-6Qa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="U8f-c1-HsN"/>
+                <constraint firstItem="0Z7-vr-TWk" firstAttribute="leading" secondItem="MLV-HR-c7f" secondAttribute="leading" id="YT8-W6-cmW"/>
+                <constraint firstAttribute="trailing" secondItem="leM-l3-6Qa" secondAttribute="trailing" constant="10" id="baH-P0-UYA"/>
+                <constraint firstItem="0Z7-vr-TWk" firstAttribute="leading" secondItem="O4A-8o-eCS" secondAttribute="trailing" constant="10" id="fXJ-tX-3Sm"/>
+                <constraint firstItem="O4A-8o-eCS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="gxM-2g-nTB"/>
+                <constraint firstItem="MLV-HR-c7f" firstAttribute="top" secondItem="0Z7-vr-TWk" secondAttribute="bottom" constant="10" id="ir8-HG-nq6"/>
+                <constraint firstAttribute="trailing" secondItem="0Z7-vr-TWk" secondAttribute="trailing" constant="10" id="nH4-Dc-ObT"/>
+                <constraint firstItem="leM-l3-6Qa" firstAttribute="top" secondItem="O4A-8o-eCS" secondAttribute="bottom" constant="10" id="t9e-0a-QVm"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="600" y="451"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

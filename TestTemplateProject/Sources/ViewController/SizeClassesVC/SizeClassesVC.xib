@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SizeClassesVC">
+            <connections>
+                <outlet property="contentViewHeightConstraint" destination="ZmW-GI-c4f" id="aGI-tG-IeY"/>
+                <outlet property="contentViewWidthConstraint" destination="ger-PK-aWU" id="QOU-Ld-Eij"/>
+                <outlet property="labelA" destination="fBZ-5k-vp6" id="HEc-zy-OVe"/>
+                <outlet property="labelB" destination="1DR-UJ-Yh0" id="57S-l8-3Eo"/>
+                <outlet property="labelC" destination="5ZB-aI-sBd" id="y3t-To-1y6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W55-wU-ZEe" userLabel="contentView">
+                    <rect key="frame" x="60" y="90" width="200" height="300"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所有情况都显示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBZ-5k-vp6">
+                            <rect key="frame" x="19" y="10" width="162" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="只有iPhone竖屏显示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DR-UJ-Yh0">
+                            <rect key="frame" x="19" y="139" width="162" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="只有iPad横屏显示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZB-aI-sBd">
+                            <rect key="frame" x="19" y="469.5" width="362" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="1DR-UJ-Yh0" secondAttribute="centerX" id="4CL-pf-bII"/>
+                        <constraint firstItem="fBZ-5k-vp6" firstAttribute="top" secondItem="W55-wU-ZEe" secondAttribute="top" constant="10" id="IU7-0W-70o">
+                            <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                        </constraint>
+                        <constraint firstItem="5ZB-aI-sBd" firstAttribute="leading" secondItem="W55-wU-ZEe" secondAttribute="leading" constant="19" id="X6g-If-a5d"/>
+                        <constraint firstItem="1DR-UJ-Yh0" firstAttribute="leading" secondItem="W55-wU-ZEe" secondAttribute="leading" constant="19" id="Y1l-nu-c7p"/>
+                        <constraint firstAttribute="height" constant="300" id="ZmW-GI-c4f">
+                            <variation key="heightClass=compact" constant="100"/>
+                            <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="1DR-UJ-Yh0" secondAttribute="trailing" constant="19" id="d3W-E6-YbJ"/>
+                        <constraint firstItem="fBZ-5k-vp6" firstAttribute="leading" secondItem="W55-wU-ZEe" secondAttribute="leading" constant="19" id="dDH-Nj-T1y"/>
+                        <constraint firstAttribute="width" constant="200" id="ger-PK-aWU">
+                            <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="5ZB-aI-sBd" secondAttribute="trailing" constant="19" id="jwu-7y-K3D"/>
+                        <constraint firstAttribute="centerY" secondItem="1DR-UJ-Yh0" secondAttribute="centerY" constant="0.5" id="r1s-zp-DfR"/>
+                        <constraint firstAttribute="bottom" secondItem="5ZB-aI-sBd" secondAttribute="bottom" constant="49" id="rEf-hd-NwH">
+                            <variation key="heightClass=regular-widthClass=regular" constant="9.5"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="fBZ-5k-vp6" secondAttribute="trailing" constant="19" id="zjJ-2f-zYI"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="5ZB-aI-sBd"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="X6g-If-a5d"/>
+                            <exclude reference="jwu-7y-K3D"/>
+                            <exclude reference="rEf-hd-NwH"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="subviews">
+                            <exclude reference="1DR-UJ-Yh0"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="subviews">
+                            <exclude reference="1DR-UJ-Yh0"/>
+                            <include reference="5ZB-aI-sBd"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="jwu-7y-K3D"/>
+                            <include reference="rEf-hd-NwH"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="W55-wU-ZEe" secondAttribute="centerY" id="9Om-5b-AaE"/>
+                <constraint firstAttribute="centerX" secondItem="W55-wU-ZEe" secondAttribute="centerX" id="McB-Yf-941"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
