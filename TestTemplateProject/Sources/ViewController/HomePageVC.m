@@ -22,6 +22,7 @@
 #import "CellHeightCalcVC.h"
 #import "Demo11_1VC.h"
 #import "Demo11_2VC.h"
+#import "Demo11_3VC.h"
 
 #import "PlaygroundVC.h"
 
@@ -153,11 +154,14 @@ static const CGFloat kTableViewCellHeight = 60.0f;
                                               VC1.title = @"edgesForExtendedLayout属性";
                                               Demo11_2VC *VC2 = [[Demo11_2VC alloc] init];
                                               VC2.title = @"automaticallyAdjustsScrollViewInsets属性";
+                                              Demo11_3VC *VC3 = [[Demo11_3VC alloc] init];
+                                              VC3.title = @"contentInsetAdjustmentBehavior属性";
                                               
                                               BNNavigationController *navVC1 = [[BNNavigationController alloc] initWithRootViewController:VC1];
                                               BNNavigationController *navVC2 = [[BNNavigationController alloc] initWithRootViewController:VC2];
+                                              BNNavigationController *navVC3 = [[BNNavigationController alloc] initWithRootViewController:VC3];
                                               BNTabBarController *tabVC = [[BNTabBarController alloc] init];
-                                              [tabVC setViewControllers:@[navVC1, navVC2]];
+                                              [tabVC setViewControllers:@[navVC1, navVC2, navVC3]];
                                               tabVC.title = @"容器中视图适配";
                                               
                                               [self.navigationController pushViewController:tabVC animated:YES];

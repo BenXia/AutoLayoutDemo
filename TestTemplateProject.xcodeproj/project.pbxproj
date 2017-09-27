@@ -19,6 +19,8 @@
 		B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50394D71EEE71E00016FA97 /* HomePageVC.xib */; };
 		B50394DE1EEE71FB0016FA97 /* PlaygroundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B50394DC1EEE71FB0016FA97 /* PlaygroundVC.m */; };
 		B50394DF1EEE71FB0016FA97 /* PlaygroundVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50394DD1EEE71FB0016FA97 /* PlaygroundVC.xib */; };
+		B54BC78C1F7B88C000C28D16 /* Demo11_3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B54BC7891F7B88BF00C28D16 /* Demo11_3VC.m */; };
+		B54BC78D1F7B88C000C28D16 /* Demo11_3VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54BC78A1F7B88BF00C28D16 /* Demo11_3VC.xib */; };
 		B56DDC711EF0D36A00997B06 /* BNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56DDC701EF0D36A00997B06 /* BNTabBarController.m */; };
 		B56DDCCA1EF0D5BD00997B06 /* AbsoluteLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B56DDC741EF0D5BD00997B06 /* AbsoluteLayoutVC.m */; };
 		B56DDCCB1EF0D5BD00997B06 /* AbsoluteLayoutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B56DDC751EF0D5BD00997B06 /* AbsoluteLayoutVC.xib */; };
@@ -98,6 +100,9 @@
 		B50394DB1EEE71FB0016FA97 /* PlaygroundVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundVC.h; sourceTree = "<group>"; };
 		B50394DC1EEE71FB0016FA97 /* PlaygroundVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundVC.m; sourceTree = "<group>"; };
 		B50394DD1EEE71FB0016FA97 /* PlaygroundVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaygroundVC.xib; sourceTree = "<group>"; };
+		B54BC7891F7B88BF00C28D16 /* Demo11_3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo11_3VC.m; sourceTree = "<group>"; };
+		B54BC78A1F7B88BF00C28D16 /* Demo11_3VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Demo11_3VC.xib; sourceTree = "<group>"; };
+		B54BC78B1F7B88BF00C28D16 /* Demo11_3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo11_3VC.h; sourceTree = "<group>"; };
 		B56DDC6F1EF0D36A00997B06 /* BNTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNTabBarController.h; sourceTree = "<group>"; };
 		B56DDC701EF0D36A00997B06 /* BNTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNTabBarController.m; sourceTree = "<group>"; };
 		B56DDC731EF0D5BD00997B06 /* AbsoluteLayoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsoluteLayoutVC.h; sourceTree = "<group>"; };
@@ -570,6 +575,9 @@
 				B56DDD6C1EF0E33A00997B06 /* Demo11_2VC.h */,
 				B56DDD6D1EF0E33A00997B06 /* Demo11_2VC.m */,
 				B56DDD6E1EF0E33A00997B06 /* Demo11_2VC.xib */,
+				B54BC78B1F7B88BF00C28D16 /* Demo11_3VC.h */,
+				B54BC7891F7B88BF00C28D16 /* Demo11_3VC.m */,
+				B54BC78A1F7B88BF00C28D16 /* Demo11_3VC.xib */,
 			);
 			path = ContainerChildVCLayoutVC;
 			sourceTree = "<group>";
@@ -666,6 +674,7 @@
 				B56DDD651EF0E2D000997B06 /* ManualLayoutTextViewCell.xib in Resources */,
 				B56DDD1F1EF0DEB700997B06 /* SizeClassesVC.xib in Resources */,
 				B56DDD5D1EF0E2D000997B06 /* AutoLayoutTextViewCellVC.xib in Resources */,
+				B54BC78D1F7B88C000C28D16 /* Demo11_3VC.xib in Resources */,
 				330F7C021ED334380009280A /* Assets.xcassets in Resources */,
 				B56DDCCB1EF0D5BD00997B06 /* AbsoluteLayoutVC.xib in Resources */,
 			);
@@ -753,6 +762,7 @@
 				B56DDD341EF0E25D00997B06 /* MixLayoutVC.m in Sources */,
 				330F7BF61ED333F00009280A /* AppDelegate.m in Sources */,
 				B56DDD641EF0E2D000997B06 /* ManualLayoutTextViewCell.m in Sources */,
+				B54BC78C1F7B88C000C28D16 /* Demo11_3VC.m in Sources */,
 				330F7C0D1ED349AB0009280A /* UIView+Helper.m in Sources */,
 				330F7C001ED333F00009280A /* main.m in Sources */,
 				337EEC291EDC3F2C00EDC166 /* NSObject+DLIntrospection.m in Sources */,
