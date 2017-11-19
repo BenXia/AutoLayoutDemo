@@ -23,7 +23,7 @@
 #import "Demo11_1VC.h"
 #import "Demo11_2VC.h"
 #import "Demo11_3VC.h"
-
+#import "SafeAreaVC.h"
 #import "PlaygroundVC.h"
 
 typedef void(^Block)(void);
@@ -166,10 +166,14 @@ static const CGFloat kTableViewCellHeight = 60.0f;
                                               
                                               [self.navigationController pushViewController:tabVC animated:YES];
                                           }];
+    HomePageCellModel *model15 = [HomePageCellModel modelWithTitle:@"SafeArea"
+                                                          subTitle:@"SafeArea之UIView/UIScrollView/UITableView/UIWebView/UIViewController"
+                                                           vcClass:[SafeAreaVC class]
+                                                      navigationVC:self.navigationController];
     
     
     
-    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, model13, model14, nil];
+    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, model13, model14, model15, nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
