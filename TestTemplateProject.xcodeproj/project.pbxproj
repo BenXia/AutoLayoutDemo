@@ -20,6 +20,14 @@
 		B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50394D71EEE71E00016FA97 /* HomePageVC.xib */; };
 		B50394DE1EEE71FB0016FA97 /* PlaygroundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B50394DC1EEE71FB0016FA97 /* PlaygroundVC.m */; };
 		B50394DF1EEE71FB0016FA97 /* PlaygroundVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50394DD1EEE71FB0016FA97 /* PlaygroundVC.xib */; };
+		B51F58181FC326BC00D91A49 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B51F58081FC326BC00D91A49 /* MJRefresh.bundle */; };
+		B51F58191FC326BC00D91A49 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51F580B1FC326BC00D91A49 /* MJRefreshBaseView.m */; };
+		B51F581A1FC326BC00D91A49 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B51F580D1FC326BC00D91A49 /* MJRefreshConst.m */; };
+		B51F581B1FC326BC00D91A49 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51F580F1FC326BC00D91A49 /* MJRefreshFooterView.m */; };
+		B51F581C1FC326BC00D91A49 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51F58111FC326BC00D91A49 /* MJRefreshHeaderView.m */; };
+		B51F581D1FC326BC00D91A49 /* UIScrollView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B51F58131FC326BC00D91A49 /* UIScrollView+Extension.m */; };
+		B51F581E1FC326BC00D91A49 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = B51F58151FC326BC00D91A49 /* UIScrollView+MJRefresh.m */; };
+		B51F581F1FC326BC00D91A49 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B51F58171FC326BC00D91A49 /* UIView+Extension.m */; };
 		B54BC78C1F7B88C000C28D16 /* Demo11_3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B54BC7891F7B88BF00C28D16 /* Demo11_3VC.m */; };
 		B54BC78D1F7B88C000C28D16 /* Demo11_3VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54BC78A1F7B88BF00C28D16 /* Demo11_3VC.xib */; };
 		B56DDC711EF0D36A00997B06 /* BNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56DDC701EF0D36A00997B06 /* BNTabBarController.m */; };
@@ -103,6 +111,22 @@
 		B50394DB1EEE71FB0016FA97 /* PlaygroundVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundVC.h; sourceTree = "<group>"; };
 		B50394DC1EEE71FB0016FA97 /* PlaygroundVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundVC.m; sourceTree = "<group>"; };
 		B50394DD1EEE71FB0016FA97 /* PlaygroundVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaygroundVC.xib; sourceTree = "<group>"; };
+		B51F58081FC326BC00D91A49 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		B51F58091FC326BC00D91A49 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		B51F580A1FC326BC00D91A49 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		B51F580B1FC326BC00D91A49 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		B51F580C1FC326BC00D91A49 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		B51F580D1FC326BC00D91A49 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		B51F580E1FC326BC00D91A49 /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		B51F580F1FC326BC00D91A49 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		B51F58101FC326BC00D91A49 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		B51F58111FC326BC00D91A49 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		B51F58121FC326BC00D91A49 /* UIScrollView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Extension.h"; sourceTree = "<group>"; };
+		B51F58131FC326BC00D91A49 /* UIScrollView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Extension.m"; sourceTree = "<group>"; };
+		B51F58141FC326BC00D91A49 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		B51F58151FC326BC00D91A49 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		B51F58161FC326BC00D91A49 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		B51F58171FC326BC00D91A49 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		B54BC7891F7B88BF00C28D16 /* Demo11_3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo11_3VC.m; sourceTree = "<group>"; };
 		B54BC78A1F7B88BF00C28D16 /* Demo11_3VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Demo11_3VC.xib; sourceTree = "<group>"; };
 		B54BC78B1F7B88BF00C28D16 /* Demo11_3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo11_3VC.h; sourceTree = "<group>"; };
@@ -269,6 +293,7 @@
 		330F7BE21ED333F00009280A /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				B51F58071FC326BC00D91A49 /* 上下拉刷新 */,
 				337EEC261EDC3F2C00EDC166 /* DLIntrospection */,
 			);
 			path = Vendor;
@@ -356,6 +381,29 @@
 				B50394DD1EEE71FB0016FA97 /* PlaygroundVC.xib */,
 			);
 			path = Playground;
+			sourceTree = "<group>";
+		};
+		B51F58071FC326BC00D91A49 /* 上下拉刷新 */ = {
+			isa = PBXGroup;
+			children = (
+				B51F58081FC326BC00D91A49 /* MJRefresh.bundle */,
+				B51F58091FC326BC00D91A49 /* MJRefresh.h */,
+				B51F580A1FC326BC00D91A49 /* MJRefreshBaseView.h */,
+				B51F580B1FC326BC00D91A49 /* MJRefreshBaseView.m */,
+				B51F580C1FC326BC00D91A49 /* MJRefreshConst.h */,
+				B51F580D1FC326BC00D91A49 /* MJRefreshConst.m */,
+				B51F580E1FC326BC00D91A49 /* MJRefreshFooterView.h */,
+				B51F580F1FC326BC00D91A49 /* MJRefreshFooterView.m */,
+				B51F58101FC326BC00D91A49 /* MJRefreshHeaderView.h */,
+				B51F58111FC326BC00D91A49 /* MJRefreshHeaderView.m */,
+				B51F58121FC326BC00D91A49 /* UIScrollView+Extension.h */,
+				B51F58131FC326BC00D91A49 /* UIScrollView+Extension.m */,
+				B51F58141FC326BC00D91A49 /* UIScrollView+MJRefresh.h */,
+				B51F58151FC326BC00D91A49 /* UIScrollView+MJRefresh.m */,
+				B51F58161FC326BC00D91A49 /* UIView+Extension.h */,
+				B51F58171FC326BC00D91A49 /* UIView+Extension.m */,
+			);
+			path = "上下拉刷新";
 			sourceTree = "<group>";
 		};
 		B56DDC6A1EF0D33200997B06 /* BNTabBarController */ = {
@@ -594,12 +642,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 330F7BD41ED3321F0009280A /* Build configuration list for PBXNativeTarget "TestTemplateProject" */;
 			buildPhases = (
-				E066EE105A7C679E0096DEB6 /* [CP] Check Pods Manifest.lock */,
+				3EB1D48EEBACEABA1BD0E93E /* [CP] Check Pods Manifest.lock */,
 				330F7BB91ED3321F0009280A /* Sources */,
 				330F7BBA1ED3321F0009280A /* Frameworks */,
 				330F7BBB1ED3321F0009280A /* Resources */,
-				017CFE35F4873F7DCD00325B /* [CP] Embed Pods Frameworks */,
-				E2A3D35009822E41A6D16F3A /* [CP] Copy Pods Resources */,
+				0290921E444C6386286B7559 /* [CP] Embed Pods Frameworks */,
+				3A352871B55A225B9BBBF1A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -665,6 +713,7 @@
 				B56DDCCD1EF0D5BD00997B06 /* AutoLayoutVC.xib in Resources */,
 				B56DDD591EF0E2D000997B06 /* AutoLayoutLabelCellVC.xib in Resources */,
 				B56DDD5B1EF0E2D000997B06 /* AutoLayoutTextViewCell.xib in Resources */,
+				B51F58181FC326BC00D91A49 /* MJRefresh.bundle in Resources */,
 				B50394DF1EEE71FB0016FA97 /* PlaygroundVC.xib in Resources */,
 				B56DDD611EF0E2D000997B06 /* ManualLayoutLabelCell.xib in Resources */,
 				B56DDD571EF0E2D000997B06 /* AutoLayoutLabelCell.xib in Resources */,
@@ -680,7 +729,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		017CFE35F4873F7DCD00325B /* [CP] Embed Pods Frameworks */ = {
+		0290921E444C6386286B7559 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -695,34 +744,40 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestTemplateProject/Pods-TestTemplateProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E066EE105A7C679E0096DEB6 /* [CP] Check Pods Manifest.lock */ = {
+		3A352871B55A225B9BBBF1A9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E2A3D35009822E41A6D16F3A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TestTemplateProject/Pods-TestTemplateProject-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestTemplateProject/Pods-TestTemplateProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EB1D48EEBACEABA1BD0E93E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestTemplateProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -735,6 +790,7 @@
 				B56DDCFB1EF0D5F900997B06 /* BNNavigationController.m in Sources */,
 				33144EF91EF05218006D27AC /* NSString+Size.m in Sources */,
 				B56DDD181EF0DE4400997B06 /* ScrollViewAutoLayoutVC.m in Sources */,
+				B51F581B1FC326BC00D91A49 /* MJRefreshFooterView.m in Sources */,
 				B56DDD2E1EF0E1A600997B06 /* StandardAutoLayoutViewVC.m in Sources */,
 				B56DDD1E1EF0DEB700997B06 /* SizeClassesVC.m in Sources */,
 				B56DDD011EF0DB1D00997B06 /* IntrinsicContentSizeVC.m in Sources */,
@@ -745,6 +801,7 @@
 				B56DDD5C1EF0E2D000997B06 /* AutoLayoutTextViewCellVC.m in Sources */,
 				B56DDD5E1EF0E2D000997B06 /* CellHeightCalcVC.m in Sources */,
 				B56DDD661EF0E2D000997B06 /* ManualLayoutTextViewCellVC.m in Sources */,
+				B51F581D1FC326BC00D91A49 /* UIScrollView+Extension.m in Sources */,
 				B56DDD601EF0E2D000997B06 /* ManualLayoutLabelCell.m in Sources */,
 				B56DDD071EF0DC1C00997B06 /* GalleryVC.m in Sources */,
 				B56DDD5A1EF0E2D000997B06 /* AutoLayoutTextViewCell.m in Sources */,
@@ -754,11 +811,16 @@
 				B50394D81EEE71E00016FA97 /* HomePageVC.m in Sources */,
 				335FC7B31FC1F3620004FC53 /* SafeAreaVC.m in Sources */,
 				B50394DE1EEE71FB0016FA97 /* PlaygroundVC.m in Sources */,
+				B51F581A1FC326BC00D91A49 /* MJRefreshConst.m in Sources */,
+				B51F581F1FC326BC00D91A49 /* UIView+Extension.m in Sources */,
 				B56DDD6F1EF0E33A00997B06 /* Demo11_1VC.m in Sources */,
+				B51F58191FC326BC00D91A49 /* MJRefreshBaseView.m in Sources */,
+				B51F581C1FC326BC00D91A49 /* MJRefreshHeaderView.m in Sources */,
 				B56DDD711EF0E33A00997B06 /* Demo11_2VC.m in Sources */,
 				B56DDD581EF0E2D000997B06 /* AutoLayoutLabelCellVC.m in Sources */,
 				B56DDD341EF0E25D00997B06 /* MixLayoutVC.m in Sources */,
 				330F7BF61ED333F00009280A /* AppDelegate.m in Sources */,
+				B51F581E1FC326BC00D91A49 /* UIScrollView+MJRefresh.m in Sources */,
 				B56DDD641EF0E2D000997B06 /* ManualLayoutTextViewCell.m in Sources */,
 				B54BC78C1F7B88C000C28D16 /* Demo11_3VC.m in Sources */,
 				330F7C0D1ED349AB0009280A /* UIView+Helper.m in Sources */,
@@ -871,6 +933,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TestTemplateProject/Sources/Global/PrefixHeader.pch;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
@@ -892,6 +955,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TestTemplateProject/Sources/Global/PrefixHeader.pch;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;

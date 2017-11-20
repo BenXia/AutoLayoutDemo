@@ -8,6 +8,7 @@
 
 #import "SafeAreaVC.h"
 #import <WebKit/WebKit.h>
+#import "MJRefresh.h"
 
 @interface SafeAreaVC () <UITableViewDataSource, UITableViewDelegate>
 
@@ -204,18 +205,18 @@
         }];
     }
     
-//    [self.tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
-//
-//    // 设置文字(也可以不设置,默认的文字在MJRefreshConst中修改)
-//    self.tableView.headerPullToRefreshText = @"下拉刷新";
-//    self.tableView.headerReleaseToRefreshText = @"松开就可以刷新了";
-//    self.tableView.headerRefreshingText = @"正在刷新";
-//
-//    [self.tableView addFooterWithTarget:self action:@selector(footerRereshing)];
-//
-//    self.tableView.footerPullToRefreshText = @"上拉可以加载更多数据了";
-//    self.tableView.footerReleaseToRefreshText = @"松开马上加载更多数据了";
-//    self.tableView.footerRefreshingText = @"正在加载中";
+    [self.tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+
+    // 设置文字(也可以不设置,默认的文字在MJRefreshConst中修改)
+    self.tableView.headerPullToRefreshText = @"下拉刷新";
+    self.tableView.headerReleaseToRefreshText = @"松开就可以刷新了";
+    self.tableView.headerRefreshingText = @"正在刷新";
+
+    [self.tableView addFooterWithTarget:self action:@selector(footerRereshing)];
+
+    self.tableView.footerPullToRefreshText = @"上拉可以加载更多数据了";
+    self.tableView.footerReleaseToRefreshText = @"松开马上加载更多数据了";
+    self.tableView.footerRefreshingText = @"正在加载中";
     
 //    if (@available(iOS 11.0, *)) {
 //        NSLog (@"self.tableView.contentInsetAdjustmentBehavior : %d", self.tableView.contentInsetAdjustmentBehavior);
@@ -224,17 +225,17 @@
 //    }
 }
 
-//- (void)headerRereshing {
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self.tableView headerEndRefreshing];
-//    });
-//}
-//
-//- (void)footerRereshing {
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self.tableView footerEndRefreshing];
-//    });
-//}
+- (void)headerRereshing {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableView headerEndRefreshing];
+    });
+}
+
+- (void)footerRereshing {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableView footerEndRefreshing];
+    });
+}
 
 - (void)postDidLayoutUITableViewRelated {
     if (@available(iOS 11.0, *)) {
