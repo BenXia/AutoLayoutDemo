@@ -228,6 +228,12 @@ static const CGFloat kTableViewCellHeight = 60.0f;
     if (clickHandleBlock) {
         clickHandleBlock();
     }
+   
+//    LifeCycleVC *vc = [[LifeCycleVC alloc] init];
+//    LifeCycleVC *vc = [[LifeCycleVC alloc] initWithNibName:@"LifeCycleVC" bundle:[NSBundle mainBundle]];
+//    vc.hidesBottomBarWhenPushed = YES;
+//
+//    //[self.navigationController pushViewController:vc animated:YES];
 }
 
 
