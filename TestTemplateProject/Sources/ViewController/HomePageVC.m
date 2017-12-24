@@ -24,6 +24,7 @@
 #import "Demo11_2VC.h"
 #import "Demo11_3VC.h"
 #import "SafeAreaVC.h"
+#import "LifeCycleVC.h"
 #import "PlaygroundVC.h"
 
 typedef void(^Block)(void);
@@ -170,10 +171,13 @@ static const CGFloat kTableViewCellHeight = 60.0f;
                                                           subTitle:@"SafeArea之UIView/UIScrollView/UITableView/UIWebView/UIViewController"
                                                            vcClass:[SafeAreaVC class]
                                                       navigationVC:self.navigationController];
+    HomePageCellModel *model16 = [HomePageCellModel modelWithTitle:@"生命周期"
+                                                          subTitle:@"loadView/viewDidLoad/awakeFromNib/initWithCoder"
+                                                           vcClass:[LifeCycleVC class]
+                                                      navigationVC:self.navigationController];
     
     
-    
-    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, model13, model14, model15, nil];
+    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, model13, model14, model15, model16, nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

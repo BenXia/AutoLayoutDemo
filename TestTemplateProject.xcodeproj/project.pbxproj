@@ -16,10 +16,14 @@
 		33144EF91EF05218006D27AC /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 33144EF81EF05218006D27AC /* NSString+Size.m */; };
 		335FC7B31FC1F3620004FC53 /* SafeAreaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 335FC7B21FC1F3620004FC53 /* SafeAreaVC.m */; };
 		337EEC291EDC3F2C00EDC166 /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = 337EEC281EDC3F2C00EDC166 /* NSObject+DLIntrospection.m */; };
+		33A2B9DE1FEF64A800AE7FC5 /* PlaygroundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A2B9DC1FEF64A800AE7FC5 /* PlaygroundVC.m */; };
+		33A2B9DF1FEF64A800AE7FC5 /* PlaygroundVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2B9DD1FEF64A800AE7FC5 /* PlaygroundVC.xib */; };
+		33A2B9E31FEF668900AE7FC5 /* LifeCycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A2B9E11FEF668900AE7FC5 /* LifeCycleVC.m */; };
+		33A2B9E41FEF668900AE7FC5 /* LifeCycleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2B9E21FEF668900AE7FC5 /* LifeCycleVC.xib */; };
+		33A2B9E81FEF702600AE7FC5 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A2B9E71FEF702600AE7FC5 /* CustomView.m */; };
+		33A2B9EA1FEF704000AE7FC5 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2B9E91FEF704000AE7FC5 /* CustomView.xib */; };
 		B50394D81EEE71E00016FA97 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B50394D61EEE71E00016FA97 /* HomePageVC.m */; };
 		B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50394D71EEE71E00016FA97 /* HomePageVC.xib */; };
-		B50394DE1EEE71FB0016FA97 /* PlaygroundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B50394DC1EEE71FB0016FA97 /* PlaygroundVC.m */; };
-		B50394DF1EEE71FB0016FA97 /* PlaygroundVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50394DD1EEE71FB0016FA97 /* PlaygroundVC.xib */; };
 		B51F58181FC326BC00D91A49 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B51F58081FC326BC00D91A49 /* MJRefresh.bundle */; };
 		B51F58191FC326BC00D91A49 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51F580B1FC326BC00D91A49 /* MJRefreshBaseView.m */; };
 		B51F581A1FC326BC00D91A49 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B51F580D1FC326BC00D91A49 /* MJRefreshConst.m */; };
@@ -103,14 +107,20 @@
 		335FC7B21FC1F3620004FC53 /* SafeAreaVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeAreaVC.m; sourceTree = "<group>"; };
 		337EEC271EDC3F2C00EDC166 /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
 		337EEC281EDC3F2C00EDC166 /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
+		33A2B9DB1FEF64A800AE7FC5 /* PlaygroundVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundVC.h; sourceTree = "<group>"; };
+		33A2B9DC1FEF64A800AE7FC5 /* PlaygroundVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundVC.m; sourceTree = "<group>"; };
+		33A2B9DD1FEF64A800AE7FC5 /* PlaygroundVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaygroundVC.xib; sourceTree = "<group>"; };
+		33A2B9E01FEF668900AE7FC5 /* LifeCycleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LifeCycleVC.h; sourceTree = "<group>"; };
+		33A2B9E11FEF668900AE7FC5 /* LifeCycleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeCycleVC.m; sourceTree = "<group>"; };
+		33A2B9E21FEF668900AE7FC5 /* LifeCycleVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LifeCycleVC.xib; sourceTree = "<group>"; };
+		33A2B9E61FEF702600AE7FC5 /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		33A2B9E71FEF702600AE7FC5 /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		33A2B9E91FEF704000AE7FC5 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		5C6D28EEC1B5E3424CF2308B /* Pods-TestTemplateProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTemplateProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTemplateProject/Pods-TestTemplateProject.debug.xcconfig"; sourceTree = "<group>"; };
 		8667C82644C5D48169DF56D2 /* Pods-TestTemplateProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTemplateProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestTemplateProject/Pods-TestTemplateProject.release.xcconfig"; sourceTree = "<group>"; };
 		B50394D51EEE71E00016FA97 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = "<group>"; };
 		B50394D61EEE71E00016FA97 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
 		B50394D71EEE71E00016FA97 /* HomePageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageVC.xib; sourceTree = "<group>"; };
-		B50394DB1EEE71FB0016FA97 /* PlaygroundVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundVC.h; sourceTree = "<group>"; };
-		B50394DC1EEE71FB0016FA97 /* PlaygroundVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundVC.m; sourceTree = "<group>"; };
-		B50394DD1EEE71FB0016FA97 /* PlaygroundVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaygroundVC.xib; sourceTree = "<group>"; };
 		B51F58081FC326BC00D91A49 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		B51F58091FC326BC00D91A49 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		B51F580A1FC326BC00D91A49 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
@@ -322,7 +332,8 @@
 				B56DDD361EF0E2D000997B06 /* CellHeightCalcVC */,
 				B56DDD681EF0E33A00997B06 /* ContainerChildVCLayoutVC */,
 				335FC7B01FC1F3330004FC53 /* SafeAreaVC */,
-				B50394DA1EEE71FB0016FA97 /* Playground */,
+				33A2B9D91FEF64A800AE7FC5 /* LifeCycleVC */,
+				33A2B9DA1FEF64A800AE7FC5 /* PlaygroundVC */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -364,6 +375,37 @@
 			path = DLIntrospection;
 			sourceTree = "<group>";
 		};
+		33A2B9D91FEF64A800AE7FC5 /* LifeCycleVC */ = {
+			isa = PBXGroup;
+			children = (
+				33A2B9E51FEF689800AE7FC5 /* CustomView */,
+				33A2B9E01FEF668900AE7FC5 /* LifeCycleVC.h */,
+				33A2B9E11FEF668900AE7FC5 /* LifeCycleVC.m */,
+				33A2B9E21FEF668900AE7FC5 /* LifeCycleVC.xib */,
+			);
+			path = LifeCycleVC;
+			sourceTree = "<group>";
+		};
+		33A2B9DA1FEF64A800AE7FC5 /* PlaygroundVC */ = {
+			isa = PBXGroup;
+			children = (
+				33A2B9DB1FEF64A800AE7FC5 /* PlaygroundVC.h */,
+				33A2B9DC1FEF64A800AE7FC5 /* PlaygroundVC.m */,
+				33A2B9DD1FEF64A800AE7FC5 /* PlaygroundVC.xib */,
+			);
+			path = PlaygroundVC;
+			sourceTree = "<group>";
+		};
+		33A2B9E51FEF689800AE7FC5 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				33A2B9E61FEF702600AE7FC5 /* CustomView.h */,
+				33A2B9E71FEF702600AE7FC5 /* CustomView.m */,
+				33A2B9E91FEF704000AE7FC5 /* CustomView.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		7B8C9382664DA89AC4C34223 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,16 +413,6 @@
 				8667C82644C5D48169DF56D2 /* Pods-TestTemplateProject.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		B50394DA1EEE71FB0016FA97 /* Playground */ = {
-			isa = PBXGroup;
-			children = (
-				B50394DB1EEE71FB0016FA97 /* PlaygroundVC.h */,
-				B50394DC1EEE71FB0016FA97 /* PlaygroundVC.m */,
-				B50394DD1EEE71FB0016FA97 /* PlaygroundVC.xib */,
-			);
-			path = Playground;
 			sourceTree = "<group>";
 		};
 		B51F58071FC326BC00D91A49 /* 上下拉刷新 */ = {
@@ -709,12 +741,14 @@
 				B56DDCCF1EF0D5BD00997B06 /* AutoresizingMaskVC.xib in Resources */,
 				B56DDD131EF0DD8600997B06 /* ModifyConstraintVC.xib in Resources */,
 				B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */,
+				33A2B9E41FEF668900AE7FC5 /* LifeCycleVC.xib in Resources */,
 				B56DDD721EF0E33A00997B06 /* Demo11_2VC.xib in Resources */,
 				B56DDCCD1EF0D5BD00997B06 /* AutoLayoutVC.xib in Resources */,
 				B56DDD591EF0E2D000997B06 /* AutoLayoutLabelCellVC.xib in Resources */,
+				33A2B9EA1FEF704000AE7FC5 /* CustomView.xib in Resources */,
+				33A2B9DF1FEF64A800AE7FC5 /* PlaygroundVC.xib in Resources */,
 				B56DDD5B1EF0E2D000997B06 /* AutoLayoutTextViewCell.xib in Resources */,
 				B51F58181FC326BC00D91A49 /* MJRefresh.bundle in Resources */,
-				B50394DF1EEE71FB0016FA97 /* PlaygroundVC.xib in Resources */,
 				B56DDD611EF0E2D000997B06 /* ManualLayoutLabelCell.xib in Resources */,
 				B56DDD571EF0E2D000997B06 /* AutoLayoutLabelCell.xib in Resources */,
 				B56DDD651EF0E2D000997B06 /* ManualLayoutTextViewCell.xib in Resources */,
@@ -792,6 +826,7 @@
 				B56DDD181EF0DE4400997B06 /* ScrollViewAutoLayoutVC.m in Sources */,
 				B51F581B1FC326BC00D91A49 /* MJRefreshFooterView.m in Sources */,
 				B56DDD2E1EF0E1A600997B06 /* StandardAutoLayoutViewVC.m in Sources */,
+				33A2B9E81FEF702600AE7FC5 /* CustomView.m in Sources */,
 				B56DDD1E1EF0DEB700997B06 /* SizeClassesVC.m in Sources */,
 				B56DDD011EF0DB1D00997B06 /* IntrinsicContentSizeVC.m in Sources */,
 				33144EF61EF05059006D27AC /* UIUtils.m in Sources */,
@@ -810,15 +845,16 @@
 				B56DDD2D1EF0E1A600997B06 /* CustomiseDemoView.m in Sources */,
 				B50394D81EEE71E00016FA97 /* HomePageVC.m in Sources */,
 				335FC7B31FC1F3620004FC53 /* SafeAreaVC.m in Sources */,
-				B50394DE1EEE71FB0016FA97 /* PlaygroundVC.m in Sources */,
 				B51F581A1FC326BC00D91A49 /* MJRefreshConst.m in Sources */,
 				B51F581F1FC326BC00D91A49 /* UIView+Extension.m in Sources */,
+				33A2B9E31FEF668900AE7FC5 /* LifeCycleVC.m in Sources */,
 				B56DDD6F1EF0E33A00997B06 /* Demo11_1VC.m in Sources */,
 				B51F58191FC326BC00D91A49 /* MJRefreshBaseView.m in Sources */,
 				B51F581C1FC326BC00D91A49 /* MJRefreshHeaderView.m in Sources */,
 				B56DDD711EF0E33A00997B06 /* Demo11_2VC.m in Sources */,
 				B56DDD581EF0E2D000997B06 /* AutoLayoutLabelCellVC.m in Sources */,
 				B56DDD341EF0E25D00997B06 /* MixLayoutVC.m in Sources */,
+				33A2B9DE1FEF64A800AE7FC5 /* PlaygroundVC.m in Sources */,
 				330F7BF61ED333F00009280A /* AppDelegate.m in Sources */,
 				B51F581E1FC326BC00D91A49 /* UIScrollView+MJRefresh.m in Sources */,
 				B56DDD641EF0E2D000997B06 /* ManualLayoutTextViewCell.m in Sources */,

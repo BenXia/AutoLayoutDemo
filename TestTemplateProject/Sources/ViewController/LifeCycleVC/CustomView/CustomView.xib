@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomView">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRv-j5-7LK">
+                    <rect key="frame" x="10" y="20" width="80" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXk-XB-Gdx">
+                    <rect key="frame" x="10" y="51" width="80" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="U5R-od-anq"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MRv-j5-7LK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Jcc-Cm-L1Y"/>
+                <constraint firstItem="MRv-j5-7LK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="K1X-hz-gaV"/>
+                <constraint firstItem="NXk-XB-Gdx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="LPs-Em-S6m"/>
+                <constraint firstAttribute="trailing" secondItem="MRv-j5-7LK" secondAttribute="trailing" constant="10" id="Pr2-Fw-CjP"/>
+                <constraint firstAttribute="trailing" secondItem="NXk-XB-Gdx" secondAttribute="trailing" constant="10" id="SBF-Js-nQg"/>
+                <constraint firstItem="NXk-XB-Gdx" firstAttribute="top" secondItem="MRv-j5-7LK" secondAttribute="bottom" constant="10" id="z1I-Jl-1Ns"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomButton" destination="NXk-XB-Gdx" id="lin-2d-MLr"/>
+                <outlet property="titleLabel" destination="MRv-j5-7LK" id="Mkh-mj-87w"/>
+            </connections>
+            <point key="canvasLocation" x="35" y="54"/>
+        </view>
+    </objects>
+</document>
