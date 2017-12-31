@@ -10,6 +10,9 @@
 
 @interface Demo11_2VC ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollViewOne;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollViewTwo;
+
 @end
 
 @implementation Demo11_2VC
@@ -27,8 +30,13 @@
     }
     
     // 如果设置了edgesForExtendedLayout属性不含UIRectEdgeTop时，automaticallyAdjustsScrollViewInsets则没用
-//    if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
-//        self.automaticallyAdjustsScrollViewInsets = NO;
+//    if (@available(iOS 11.0, *)) {
+//        self.scrollViewOne.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+//        self.scrollViewTwo.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+//    } else {
+//        if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
+//            self.automaticallyAdjustsScrollViewInsets = NO;
+//        }
 //    }
 }
 

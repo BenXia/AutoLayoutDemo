@@ -25,6 +25,7 @@
 #import "Demo11_3VC.h"
 #import "SafeAreaVC.h"
 #import "LifeCycleVC.h"
+#import "StackViewVC.h"
 #import "PlaygroundVC.h"
 
 typedef void(^Block)(void);
@@ -91,6 +92,18 @@ static const CGFloat kTableViewCellHeight = 60.0f;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
+    if (@available(iOS 11.0, *)) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+    }
     
     @weakify(self);
     
@@ -175,9 +188,12 @@ static const CGFloat kTableViewCellHeight = 60.0f;
                                                           subTitle:@"loadView/viewDidLoad/awakeFromNib/initWithCoder"
                                                            vcClass:[LifeCycleVC class]
                                                       navigationVC:self.navigationController];
+    HomePageCellModel *model17 = [HomePageCellModel modelWithTitle:@"UIStackView"
+                                                          subTitle:@"iOS9 新增的布局技术"
+                                                           vcClass:[StackViewVC class]
+                                                      navigationVC:self.navigationController];
     
-    
-    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, model13, model14, model15, model16, nil];
+    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, model13, model14, model17, model16, model15, nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

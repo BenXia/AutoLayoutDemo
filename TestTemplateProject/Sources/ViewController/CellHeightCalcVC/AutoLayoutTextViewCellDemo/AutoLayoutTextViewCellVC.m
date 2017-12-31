@@ -27,13 +27,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
     UINib *cellNib = [UINib nibWithNibName:@"AutoLayoutTextViewCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"AutoLayoutTextViewCell"];
     
     self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"AutoLayoutTextViewCell"];
     
     self.tableDatasourceArray = @[@"1\n2\n3\n4\n5\n6", @"12345678901234567890123456789012345678901234567890123456789012345678901234567890", @"1\n2", @"1\n2\n3", @"1"];
-
 }
 
 - (void)didReceiveMemoryWarning {

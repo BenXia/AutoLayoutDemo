@@ -27,6 +27,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
     UINib *cellNib = [UINib nibWithNibName:@"AutoLayoutLabelCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"AutoLayoutLabelCell"];
     

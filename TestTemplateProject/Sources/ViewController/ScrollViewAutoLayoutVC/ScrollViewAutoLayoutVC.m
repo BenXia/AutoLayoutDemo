@@ -10,6 +10,9 @@
 
 @interface ScrollViewAutoLayoutVC ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewBottomConstraint;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewWidthConstraint;
 
 @end
@@ -22,7 +25,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
+    self.scrollViewBottomConstraint.constant = kPortraitBottomDangerAreaHeight + 10;
+    
+    if (@available(iOS 11.0, *)) {
+        self.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {

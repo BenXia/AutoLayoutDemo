@@ -25,6 +25,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     //self.customView.translatesAutoresizingMaskIntoConstraints = YES; // Notice
 }
 

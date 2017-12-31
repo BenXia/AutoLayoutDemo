@@ -10,6 +10,8 @@
 
 @interface Demo11_1VC ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation Demo11_1VC
@@ -26,8 +28,12 @@
         //self.edgesForExtendedLayout = UIRectEdgeBottom;
     }
     
-    if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
-        self.automaticallyAdjustsScrollViewInsets = NO;
+    if (@available(iOS 11.0, *)) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
     }
 }
 

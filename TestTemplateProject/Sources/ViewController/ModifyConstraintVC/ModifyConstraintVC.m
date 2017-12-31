@@ -29,6 +29,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
     self.viewCByCode = [UIView new];
     self.viewCByCode.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.viewCByCode];

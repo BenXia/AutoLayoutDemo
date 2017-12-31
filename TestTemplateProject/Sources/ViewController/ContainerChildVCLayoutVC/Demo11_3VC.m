@@ -28,13 +28,16 @@
 //        //self.edgesForExtendedLayout = UIRectEdgeBottom;
 //    }
     
-    // iOS10 使用下面代码
-    if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
     
-    // iOS11 使用下面代码（还要注意，iPhone X 与之前的 iPhone导航栏高度不一样, iPhoneX: 44 + 44 + 52   before iPhoneX: 20 + 44 + 52)
-//    self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    if (@available(iOS 11.0, *)) {
+        // iOS11 使用下面代码（还要注意，iPhone X 与之前的 iPhone导航栏高度不一样, iPhoneX: 44 + 44 + 52   before iPhoneX: 20 + 44 + 52)
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // iOS11 之前使用下面代码
+        if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {

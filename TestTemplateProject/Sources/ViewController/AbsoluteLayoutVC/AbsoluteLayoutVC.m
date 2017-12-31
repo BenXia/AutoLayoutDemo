@@ -20,9 +20,9 @@
 
 
 static const CGFloat kViewEdge = 10;
-static const CGFloat kViewAiPhoneVerticalOriginY = 74;
+static const CGFloat kViewAiPhoneVerticalOriginY = 10;
 static const CGFloat kViewAiPhoneHorizontalOriginY = 44;
-static const CGFloat kViewAiPadOriginY = 74;
+static const CGFloat kViewAiPadOriginY = 10;
 static const CGFloat kViewAHeight = 200;
 
 @interface AbsoluteLayoutVC ()
@@ -41,6 +41,10 @@ static const CGFloat kViewAHeight = 200;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
