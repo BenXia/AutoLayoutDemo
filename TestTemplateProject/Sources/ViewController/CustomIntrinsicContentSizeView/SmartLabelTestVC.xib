@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmartLabelTestVC">
+            <connections>
+                <outlet property="smartView" destination="1ON-qQ-kmc" id="pPR-OU-p4q"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="752" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="1ON-qQ-kmc" customClass="SmartLabel">
+                    <rect key="frame" x="10" y="10" width="200" height="200"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="fasldjflaksjdflkajsdflkjasldasdfasdfasdfa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PZ-at-y4x">
+                    <rect key="frame" x="220" y="100" width="145" height="21"/>
+                    <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.26274509800000001" green="0.52156862749999999" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1PZ-at-y4x" firstAttribute="centerY" secondItem="1ON-qQ-kmc" secondAttribute="centerY" id="BAY-4b-RTv"/>
+                <constraint firstItem="1ON-qQ-kmc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="Ikt-B1-dnZ"/>
+                <constraint firstAttribute="trailing" secondItem="1PZ-at-y4x" secondAttribute="trailing" constant="10" id="gPY-2j-mn2"/>
+                <constraint firstItem="1ON-qQ-kmc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="sEL-us-myT"/>
+                <constraint firstItem="1PZ-at-y4x" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1ON-qQ-kmc" secondAttribute="trailing" constant="10" id="sNk-Il-0xd"/>
+            </constraints>
+            <point key="canvasLocation" x="34" y="114"/>
+        </view>
+    </objects>
+</document>

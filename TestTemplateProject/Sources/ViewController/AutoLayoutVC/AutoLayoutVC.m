@@ -36,6 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIView *viewB;
 @property (weak, nonatomic) IBOutlet UIView *viewC;
 @property (weak, nonatomic) IBOutlet UIView *viewD;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewDBottomConstraint;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 
@@ -52,6 +53,9 @@
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
+    
+    CGFloat kBottomDangerAreaHeight = IS_IPHONE ? (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation) ? kPortraitBottomDangerAreaHeight : kLandscapeBottomDangerAreaHeight) : 0;
+    self.viewDBottomConstraint.constant = kBottomDangerAreaHeight + 10;
 }
 
 - (void)didReceiveMemoryWarning {

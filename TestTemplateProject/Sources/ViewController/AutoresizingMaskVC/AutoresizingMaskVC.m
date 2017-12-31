@@ -36,6 +36,20 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    CGFloat kStatusBarAndNavigationBarHeight = 0;
+    if (IS_IPHONE) {
+        kStatusBarAndNavigationBarHeight = UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation) ? kPortraitStatusBarAndNavigationBarHeight : (kLandscapeNavigationBarHeight + (IOS11_OR_LATER ? 0 : kStatusBarHeight));
+    } else {
+        kStatusBarAndNavigationBarHeight = kiPadStatusBarHeight + kiPadNavigationBarHeight;
+    }
+    
+    CGFloat kBottomDangerAreaHeight = IS_IPHONE ? (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation) ? kPortraitBottomDangerAreaHeight : kLandscapeBottomDangerAreaHeight) : 0;
+    self.viewD.height = kScreenHeight - kStatusBarAndNavigationBarHeight - kBottomDangerAreaHeight - 220 - 10;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

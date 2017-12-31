@@ -58,6 +58,14 @@ static const CGFloat kViewAHeight = 200;
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     CGFloat kViewAOriginY = IS_IPHONE ? (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation) ? kViewAiPhoneVerticalOriginY : kViewAiPhoneHorizontalOriginY) : kViewAiPadOriginY;
+    CGFloat kStatusBarAndNavigationBarHeight = 0;
+    if (IS_IPHONE) {
+        kStatusBarAndNavigationBarHeight = UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation) ? kPortraitStatusBarAndNavigationBarHeight : (kLandscapeNavigationBarHeight + (IOS11_OR_LATER ? 0 : kStatusBarHeight));
+    } else {
+        kStatusBarAndNavigationBarHeight = kiPadStatusBarHeight + kiPadNavigationBarHeight;
+    }
+    
+    CGFloat kBottomDangerAreaHeight = IS_IPHONE ? (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation) ? kPortraitBottomDangerAreaHeight : kLandscapeBottomDangerAreaHeight) : 0;
     
     _viewA.frame = CGRectMake(kViewEdge, kViewAOriginY, (screenWidth - 3 * kViewEdge) / 2, kViewAHeight);
     
@@ -72,7 +80,7 @@ static const CGFloat kViewAHeight = 200;
     _viewD.frame = CGRectMake(kViewEdge,
                               CGRectGetMaxY(_viewA.frame) + kViewEdge,
                               screenWidth - 2 * kViewEdge,
-                              screenHeight - (CGRectGetMaxY(_viewA.frame) + kViewEdge) - kViewEdge);
+                              screenHeight - kStatusBarAndNavigationBarHeight - (CGRectGetMaxY(_viewA.frame) + kViewEdge) - kViewEdge - kBottomDangerAreaHeight);
 }
 
 #pragma mark - 屏幕旋转相关

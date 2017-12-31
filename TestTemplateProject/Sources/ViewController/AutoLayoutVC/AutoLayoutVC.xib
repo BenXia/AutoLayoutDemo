@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13771"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutoLayoutVC">
@@ -14,6 +18,7 @@
                 <outlet property="viewB" destination="0Z7-vr-TWk" id="Q6L-OO-EB1"/>
                 <outlet property="viewC" destination="MLV-HR-c7f" id="P7h-u8-QOg"/>
                 <outlet property="viewD" destination="leM-l3-6Qa" id="FUo-Ao-he0"/>
+                <outlet property="viewDBottomConstraint" destination="J6V-dh-ZDQ" id="dZX-a5-Wq6"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,29 +27,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4A-8o-eCS" userLabel="viewA">
-                    <rect key="frame" x="10" y="10" width="173" height="200"/>
-                    <color key="backgroundColor" red="0.22352941179999999" green="0.41568627450000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="10" y="10" width="172.5" height="200"/>
+                    <color key="backgroundColor" red="0.22352941179999999" green="0.41568627450000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="96Z-K4-IGQ"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Z7-vr-TWk" userLabel="viewB">
-                    <rect key="frame" x="192" y="10" width="173" height="57"/>
-                    <color key="backgroundColor" red="0.98823529409999999" green="0.3921568627" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="192.5" y="10" width="172.5" height="57"/>
+                    <color key="backgroundColor" red="0.98823529409999999" green="0.3921568627" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLV-HR-c7f" userLabel="viewC">
-                    <rect key="frame" x="192" y="77" width="173" height="133"/>
-                    <color key="backgroundColor" red="0.8957870751" green="0.81783753390000002" blue="0.9040354505" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="192.5" y="77" width="172.5" height="133"/>
+                    <color key="backgroundColor" red="0.8957870751" green="0.81783753390000002" blue="0.9040354505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="leM-l3-6Qa" userLabel="viewD">
                     <rect key="frame" x="10" y="220" width="355" height="437"/>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="437" id="dW8-ef-VuD"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="0Z7-vr-TWk" firstAttribute="width" secondItem="MLV-HR-c7f" secondAttribute="width" id="2ya-H1-zxu"/>
                 <constraint firstItem="O4A-8o-eCS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="40b-d1-OFx"/>
@@ -62,13 +67,7 @@
                 <constraint firstAttribute="trailing" secondItem="0Z7-vr-TWk" secondAttribute="trailing" constant="10" id="nH4-Dc-ObT"/>
                 <constraint firstItem="leM-l3-6Qa" firstAttribute="top" secondItem="O4A-8o-eCS" secondAttribute="bottom" constant="10" id="t9e-0a-QVm"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="600" y="451"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

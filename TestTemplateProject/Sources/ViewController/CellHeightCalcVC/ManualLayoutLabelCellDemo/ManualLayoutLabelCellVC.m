@@ -32,6 +32,10 @@
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
     
+    if (@available(iOS 11.0, *)) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
+    }
+    
     UINib *cellNib = [UINib nibWithNibName:@"ManualLayoutLabelCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"ManualLayoutLabelCell"];
     

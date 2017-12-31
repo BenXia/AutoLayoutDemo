@@ -26,6 +26,11 @@ const BOOL IS_SCREEN_58_INCH = NO;
 const BOOL IS_IPHONEX = NO;
 #endif
 
+const CGFloat kiPadStatusBarHeight = 20.f;
+const CGFloat kiPadNavigationBarHeight = 44.f;
+
+// 下面的都只是用于 iPhone，没有考虑 iPad
+
 static const CGFloat kInnerPortaitNavigationBarHeight = 44.f;
 static const CGFloat kInnerLandscapeNavigationBarHeight = 32.f;
 static const CGFloat kInnerPortraitTabBarHeight = 49.f;

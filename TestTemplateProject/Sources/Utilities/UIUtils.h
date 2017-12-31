@@ -22,6 +22,11 @@ extern const BOOL IS_IPHONEX;            // iPhoneX 有刘海有点奇葩，单�
 
 #pragma mark - UIUtils
 
+extern const CGFloat kiPadStatusBarHeight;
+extern const CGFloat kiPadNavigationBarHeight;
+
+// 下面的都只是用于 iPhone，没有考虑 iPad
+
 extern const CGFloat kPortaitLargeTitleAreaHeight;  // iOS11 只有竖屏模式下会有，横屏下没有
 
 #define kStatusBarHeight                 [UIUtils statusBarHeight]

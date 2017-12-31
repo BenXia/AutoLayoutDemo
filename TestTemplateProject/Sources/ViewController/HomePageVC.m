@@ -26,6 +26,7 @@
 #import "SafeAreaVC.h"
 #import "LifeCycleVC.h"
 #import "StackViewVC.h"
+#import "SmartLabelTestVC.h"
 #import "PlaygroundVC.h"
 
 typedef void(^Block)(void);
@@ -98,11 +99,7 @@ static const CGFloat kTableViewCellHeight = 60.0f;
     }
     
     if (@available(iOS 11.0, *)) {
-        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    } else {
-        if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
-            self.automaticallyAdjustsScrollViewInsets = NO;
-        }
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
     }
     
     @weakify(self);
@@ -192,8 +189,14 @@ static const CGFloat kTableViewCellHeight = 60.0f;
                                                           subTitle:@"iOS9 新增的布局技术"
                                                            vcClass:[StackViewVC class]
                                                       navigationVC:self.navigationController];
+    HomePageCellModel *model18 = [HomePageCellModel modelWithTitle:@"自定义 intrinsicContentSize 视图"
+                                                          subTitle:@"支持 xib/sb 也可以直接使用"
+                                                           vcClass:[SmartLabelTestVC class]
+                                                      navigationVC:self.navigationController];
     
-    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, model13, model14, model17, model16, model15, nil];
+    
+    
+    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, model13, model14, model15, model16, model17, model18, nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
