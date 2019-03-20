@@ -36,8 +36,8 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
     CGFloat kStatusBarAndNavigationBarHeight = 0;
     if (IS_IPHONE) {

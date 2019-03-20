@@ -31,7 +31,7 @@
 
     self.view.translatesAutoresizingMaskIntoConstraints = YES;
     self.viewA.frame = CGRectMake(50, 100, 269, 361);
-    self.viewA.translatesAutoresizingMaskIntoConstraints = YES;   // Notice:影响的是自己宽高或其他super view的约束会不生效
+    self.viewA.translatesAutoresizingMaskIntoConstraints = NO;   // Notice:影响的是自己宽高或其他super view的约束会不生效
     
     NSLayoutConstraint *contentLeft = [NSLayoutConstraint constraintWithItem:self.viewA
                                                                    attribute:NSLayoutAttributeLeft
@@ -81,9 +81,9 @@
 #pragma mark - IBActions
 
 - (IBAction)didClickChangeFrameButtonAction:(id)sender {
-    self.viewA.frame = CGRectMake(50, 200, 300, 400);
+    self.viewA.frame = CGRectMake(50, 300, 300, 400);
     
-    //[self.view setNeedsUpdateConstraints];
+//    [self.view setNeedsUpdateConstraints];
 }
 
 #pragma mark - 屏幕旋转相关
