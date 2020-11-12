@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="2048" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,14 +17,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picA" translatesAutoresizingMaskIntoConstraints="NO" id="XF7-MU-gtu">
-                        <rect key="frame" x="8" y="8" width="45" height="45"/>
+                        <rect key="frame" x="8" y="11" width="45" height="45"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="45" id="OpV-VR-7Nk"/>
                             <constraint firstAttribute="width" constant="45" id="hA6-8T-a2O"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890xx" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaE-fH-SKs">
-                        <rect key="frame" x="61" y="8" width="251" height="82.5"/>
+                        <rect key="frame" x="61" y="11" width="251" height="77"/>
                         <color key="backgroundColor" red="0.22352941179999999" green="0.41568627450000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,15 +44,10 @@
             <connections>
                 <outlet property="titleLabel" destination="YaE-fH-SKs" id="K8g-EU-J18"/>
             </connections>
-            <point key="canvasLocation" x="268" y="204.5"/>
+            <point key="canvasLocation" x="388.40579710144931" y="136.94196428571428"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="picA" width="176" height="214"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>
