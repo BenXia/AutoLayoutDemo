@@ -66,12 +66,13 @@
     
     // 和 UILabel 一样使用 systemLayoutSizeFittingSize 方法计算高度是不行的，因为 UITextView 其实内部是有 UIScrollView 的
     // 所以使用 UITableView+FDTemplateLayoutCell 时注意如果内部有 UITextView 时想自动计算高度是不行的
-    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    CGFloat h = size.height;
+//    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//    CGFloat h = size.height;
     
-//    // 使用下面方法手动计算没有问题
+    // 使用下面方法手动计算没有问题
 //    CGSize textViewSize = [cell.titleTextView sizeThatFits:CGSizeMake(cell.titleTextView.frame.size.width, FLT_MAX)];
-//    CGFloat h = textViewSize.height + 16;
+    CGSize textViewSize = [cell.titleTextView sizeThatFits:CGSizeMake(kScreenWidth - 83, FLT_MAX)];
+    CGFloat h = textViewSize.height + 16;
     
     h = h > 61 ? h : 61;  //61是保证图片显示的最低高度，见xib
     return 1 + h;
