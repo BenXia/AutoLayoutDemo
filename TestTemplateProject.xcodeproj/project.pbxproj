@@ -38,6 +38,9 @@
 		B51F581F1FC326BC00D91A49 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B51F58171FC326BC00D91A49 /* UIView+Extension.m */; };
 		B54BC78C1F7B88C000C28D16 /* Demo11_3VC.m in Sources */ = {isa = PBXBuildFile; fileRef = B54BC7891F7B88BF00C28D16 /* Demo11_3VC.m */; };
 		B54BC78D1F7B88C000C28D16 /* Demo11_3VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54BC78A1F7B88BF00C28D16 /* Demo11_3VC.xib */; };
+		B55A59E5257A30720084587A /* LayoutSubviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B55A59E3257A30720084587A /* LayoutSubviewVC.m */; };
+		B55A59E6257A30720084587A /* LayoutSubviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55A59E4257A30720084587A /* LayoutSubviewVC.xib */; };
+		B55A59EB257A309E0084587A /* TestLayoutSubviewCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B55A59EA257A309E0084587A /* TestLayoutSubviewCustomView.m */; };
 		B56DDC711EF0D36A00997B06 /* BNTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56DDC701EF0D36A00997B06 /* BNTabBarController.m */; };
 		B56DDCCA1EF0D5BD00997B06 /* AbsoluteLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B56DDC741EF0D5BD00997B06 /* AbsoluteLayoutVC.m */; };
 		B56DDCCB1EF0D5BD00997B06 /* AbsoluteLayoutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B56DDC751EF0D5BD00997B06 /* AbsoluteLayoutVC.xib */; };
@@ -153,6 +156,11 @@
 		B54BC7891F7B88BF00C28D16 /* Demo11_3VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo11_3VC.m; sourceTree = "<group>"; };
 		B54BC78A1F7B88BF00C28D16 /* Demo11_3VC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Demo11_3VC.xib; sourceTree = "<group>"; };
 		B54BC78B1F7B88BF00C28D16 /* Demo11_3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo11_3VC.h; sourceTree = "<group>"; };
+		B55A59E2257A30720084587A /* LayoutSubviewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutSubviewVC.h; sourceTree = "<group>"; };
+		B55A59E3257A30720084587A /* LayoutSubviewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutSubviewVC.m; sourceTree = "<group>"; };
+		B55A59E4257A30720084587A /* LayoutSubviewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutSubviewVC.xib; sourceTree = "<group>"; };
+		B55A59E9257A309E0084587A /* TestLayoutSubviewCustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLayoutSubviewCustomView.h; sourceTree = "<group>"; };
+		B55A59EA257A309E0084587A /* TestLayoutSubviewCustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLayoutSubviewCustomView.m; sourceTree = "<group>"; };
 		B56DDC6F1EF0D36A00997B06 /* BNTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNTabBarController.h; sourceTree = "<group>"; };
 		B56DDC701EF0D36A00997B06 /* BNTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNTabBarController.m; sourceTree = "<group>"; };
 		B56DDC731EF0D5BD00997B06 /* AbsoluteLayoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsoluteLayoutVC.h; sourceTree = "<group>"; };
@@ -350,6 +358,7 @@
 				33B906BE1FF8F04800921439 /* StackViewVC */,
 				33B906C41FF9236600921439 /* CustomIntrinsicContentSizeView */,
 				33A2B9DA1FEF64A800AE7FC5 /* PlaygroundVC */,
+				B55A59E1257A30540084587A /* LayoutSubviewVC */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -475,6 +484,18 @@
 				B51F58171FC326BC00D91A49 /* UIView+Extension.m */,
 			);
 			path = "上下拉刷新";
+			sourceTree = "<group>";
+		};
+		B55A59E1257A30540084587A /* LayoutSubviewVC */ = {
+			isa = PBXGroup;
+			children = (
+				B55A59E2257A30720084587A /* LayoutSubviewVC.h */,
+				B55A59E3257A30720084587A /* LayoutSubviewVC.m */,
+				B55A59E4257A30720084587A /* LayoutSubviewVC.xib */,
+				B55A59E9257A309E0084587A /* TestLayoutSubviewCustomView.h */,
+				B55A59EA257A309E0084587A /* TestLayoutSubviewCustomView.m */,
+			);
+			path = LayoutSubviewVC;
 			sourceTree = "<group>";
 		};
 		B56DDC6A1EF0D33200997B06 /* BNTabBarController */ = {
@@ -749,6 +770,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -779,6 +801,7 @@
 				B56DDD081EF0DC1C00997B06 /* GalleryVC.xib in Resources */,
 				B56DDCCF1EF0D5BD00997B06 /* AutoresizingMaskVC.xib in Resources */,
 				B56DDD131EF0DD8600997B06 /* ModifyConstraintVC.xib in Resources */,
+				B55A59E6257A30720084587A /* LayoutSubviewVC.xib in Resources */,
 				B50394D91EEE71E00016FA97 /* HomePageVC.xib in Resources */,
 				33B906C91FF924A100921439 /* SmartLabelTestVC.xib in Resources */,
 				33A2B9E41FEF668900AE7FC5 /* LifeCycleVC.xib in Resources */,
@@ -884,6 +907,7 @@
 				B51F581A1FC326BC00D91A49 /* MJRefreshConst.m in Sources */,
 				B51F581F1FC326BC00D91A49 /* UIView+Extension.m in Sources */,
 				33A2B9E31FEF668900AE7FC5 /* LifeCycleVC.m in Sources */,
+				B55A59EB257A309E0084587A /* TestLayoutSubviewCustomView.m in Sources */,
 				B56DDD6F1EF0E33A00997B06 /* Demo11_1VC.m in Sources */,
 				33B906C31FF8F05E00921439 /* StackViewVC.m in Sources */,
 				B51F58191FC326BC00D91A49 /* MJRefreshBaseView.m in Sources */,
@@ -895,6 +919,7 @@
 				330F7BF61ED333F00009280A /* AppDelegate.m in Sources */,
 				33B906CC1FF9255C00921439 /* SmartLabel.m in Sources */,
 				B51F581E1FC326BC00D91A49 /* UIScrollView+MJRefresh.m in Sources */,
+				B55A59E5257A30720084587A /* LayoutSubviewVC.m in Sources */,
 				B56DDD641EF0E2D000997B06 /* ManualLayoutTextViewCell.m in Sources */,
 				B54BC78C1F7B88C000C28D16 /* Demo11_3VC.m in Sources */,
 				330F7C0D1ED349AB0009280A /* UIView+Helper.m in Sources */,

@@ -28,6 +28,7 @@
 #import "StackViewVC.h"
 #import "SmartLabelTestVC.h"
 #import "PlaygroundVC.h"
+#import "LayoutSubviewVC.h"
 
 typedef void(^Block)(void);
 
@@ -193,10 +194,12 @@ static const CGFloat kTableViewCellHeight = 60.0f;
                                                           subTitle:@"支持 xib/sb 也可以直接使用"
                                                            vcClass:[SmartLabelTestVC class]
                                                       navigationVC:self.navigationController];
+    HomePageCellModel *model19 = [HomePageCellModel modelWithTitle:@"layoutSubviews"
+                                                          subTitle:@"layoutSubviews过程剖析"
+                                                           vcClass:[LayoutSubviewVC class]
+                                                      navigationVC:self.navigationController];
     
-    
-    
-    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, model13, model14, model15, model16, model17, model18, nil];
+    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, model13, model14, model15, model16, model17, model18, model19, nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
