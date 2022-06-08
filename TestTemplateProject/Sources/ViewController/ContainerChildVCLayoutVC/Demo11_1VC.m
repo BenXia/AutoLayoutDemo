@@ -23,13 +23,13 @@
     // Do any additional setup after loading the view from its nib.
     
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-        //self.edgesForExtendedLayout = UIRectEdgeLeft | UIRectEdgeRight;
-        //self.edgesForExtendedLayout = UIRectEdgeBottom;
+        self.edgesForExtendedLayout = UIRectEdgeNone; // UIRectEdgeTop;
+//        self.edgesForExtendedLayout = UIRectEdgeLeft | UIRectEdgeRight;
+//        self.edgesForExtendedLayout = UIRectEdgeBottom;
     }
     
     if (@available(iOS 11.0, *)) {
-        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;//UIScrollViewContentInsetAdjustmentNever; //UIScrollViewContentInsetAdjustmentAlways;UIScrollViewContentInsetAdjustmentAutomatic;
     } else {
         if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
             self.automaticallyAdjustsScrollViewInsets = NO;

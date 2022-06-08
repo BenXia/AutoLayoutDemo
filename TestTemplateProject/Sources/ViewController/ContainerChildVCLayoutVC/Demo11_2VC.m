@@ -24,20 +24,20 @@
     // Do any additional setup after loading the view from its nib.
     
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.edgesForExtendedLayout = UIRectEdgeTop;
         //self.edgesForExtendedLayout = UIRectEdgeLeft | UIRectEdgeRight;
-        //self.edgesForExtendedLayout = UIRectEdgeTop | UIRectEdgeLeft;
+//        self.edgesForExtendedLayout = UIRectEdgeTop | UIRectEdgeLeft;
     }
     
     // 如果设置了edgesForExtendedLayout属性不含UIRectEdgeTop时，automaticallyAdjustsScrollViewInsets则没用
-//    if (@available(iOS 11.0, *)) {
-//        self.scrollViewOne.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-//        self.scrollViewTwo.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-//    } else {
-//        if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
-//            self.automaticallyAdjustsScrollViewInsets = NO;
-//        }
-//    }
+    if (@available(iOS 11.0, *)) {
+        self.scrollViewOne.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
+        self.scrollViewTwo.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAlways;
+    } else {
+        if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {

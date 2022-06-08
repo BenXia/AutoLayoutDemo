@@ -22,11 +22,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
-//        self.edgesForExtendedLayout = UIRectEdgeNone;
-//        //self.edgesForExtendedLayout = UIRectEdgeLeft | UIRectEdgeRight;
-//        //self.edgesForExtendedLayout = UIRectEdgeBottom;
-//    }
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeTop;
+        //self.edgesForExtendedLayout = UIRectEdgeLeft | UIRectEdgeRight;
+        //self.edgesForExtendedLayout = UIRectEdgeBottom;
+    }
     
     
     if (@available(iOS 11.0, *)) {

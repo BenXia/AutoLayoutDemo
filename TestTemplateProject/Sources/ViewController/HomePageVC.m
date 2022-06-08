@@ -170,8 +170,11 @@ static const CGFloat kTableViewCellHeight = 60.0f;
                                               VC3.title = @"contentInsetAdjustmentBehavior属性";
                                               
                                               BNNavigationController *navVC1 = [[BNNavigationController alloc] initWithRootViewController:VC1];
+                                              navVC1.navigationBarHidden = NO;
                                               BNNavigationController *navVC2 = [[BNNavigationController alloc] initWithRootViewController:VC2];
+                                              navVC2.navigationBarHidden = YES;
                                               BNNavigationController *navVC3 = [[BNNavigationController alloc] initWithRootViewController:VC3];
+                                              navVC3.navigationBarHidden = YES;
                                               BNTabBarController *tabVC = [[BNTabBarController alloc] init];
                                               [tabVC setViewControllers:@[navVC1, navVC2, navVC3]];
                                               tabVC.title = @"容器中视图适配";
