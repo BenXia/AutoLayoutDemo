@@ -15,6 +15,7 @@
 #import "AutoLayoutAPIVC.h"
 #import "ModifyConstraintVC.h"
 #import "ScrollViewAutoLayoutVC.h"
+#import "ScrollViewAutoLayout2VC.h"
 #import "SizeClassesVC.h"
 #import "StandardAutoLayoutVC.h"
 #import "StandardAutoLayoutViewVC.h"
@@ -134,30 +135,34 @@ static const CGFloat kTableViewCellHeight = 60.0f;
                                                           vcClass:[ModifyConstraintVC class]
                                                      navigationVC:self.navigationController];
     HomePageCellModel *model8 = [HomePageCellModel modelWithTitle:@"UIScrollView使用AutoLayout"
-                                                         subTitle:@"一个需要注意的AutoLayout使用场景"
+                                                         subTitle:@"内嵌一层contentView实现"
                                                           vcClass:[ScrollViewAutoLayoutVC class]
                                                      navigationVC:self.navigationController];
-    HomePageCellModel *model9 = [HomePageCellModel modelWithTitle:@"Size Classes"
+    HomePageCellModel *model9 = [HomePageCellModel modelWithTitle:@"UIScrollView使用AutoLayout"
+                                                         subTitle:@"不内嵌一层，里面子视图需要由内向外决定contentView的大小"
+                                                          vcClass:[ScrollViewAutoLayout2VC class]
+                                                     navigationVC:self.navigationController];
+    HomePageCellModel *model10 = [HomePageCellModel modelWithTitle:@"Size Classes"
                                                          subTitle:@"适配iPhone、iPad不同屏幕横竖屏"
                                                           vcClass:[SizeClassesVC class]
                                                      navigationVC:self.navigationController];
-    HomePageCellModel *model10 = [HomePageCellModel modelWithTitle:@"VC自动布局基本结构"
+    HomePageCellModel *model11 = [HomePageCellModel modelWithTitle:@"VC自动布局基本结构"
                                                          subTitle:@"自定义UIViewController中布局相关代码，统一规范"
                                                           vcClass:[StandardAutoLayoutVC class]
                                                      navigationVC:self.navigationController];
-    HomePageCellModel *model11 = [HomePageCellModel modelWithTitle:@"View自动布局基本结构"
+    HomePageCellModel *model12 = [HomePageCellModel modelWithTitle:@"View自动布局基本结构"
                                                          subTitle:@"自定义视图(包括TableViewCell)中布局相关代码，统一规范"
                                                           vcClass:[StandardAutoLayoutViewVC class]
                                                      navigationVC:self.navigationController];
-    HomePageCellModel *model12 = [HomePageCellModel modelWithTitle:@"混合布局"
+    HomePageCellModel *model13 = [HomePageCellModel modelWithTitle:@"混合布局"
                                                           subTitle:@"支持/不支持AutoLayout的视图混合布局"
                                                            vcClass:[MixLayoutVC class]
                                                       navigationVC:self.navigationController];
-    HomePageCellModel *model13 = [HomePageCellModel modelWithTitle:@"UITableViewCell高度计算"
+    HomePageCellModel *model14 = [HomePageCellModel modelWithTitle:@"UITableViewCell高度计算"
                                                           subTitle:@"动态计算UITableViewCell高度详解"
                                                            vcClass:[CellHeightCalcVC class]
                                                       navigationVC:self.navigationController];
-    HomePageCellModel *model14 = [HomePageCellModel modelWithTitle:@"edgesForExtendedLayout/automaticallyAdjustsScrollViewInsets"
+    HomePageCellModel *model15 = [HomePageCellModel modelWithTitle:@"edgesForExtendedLayout/automaticallyAdjustsScrollViewInsets"
                                                           subTitle:@"UINaviationController/UITabBarController中的视图位置适配问题"
                                           didSelectCellHandleBlock:^{
                                               @strongify(self);
@@ -181,28 +186,28 @@ static const CGFloat kTableViewCellHeight = 60.0f;
                                               
                                               [self.navigationController pushViewController:tabVC animated:YES];
                                           }];
-    HomePageCellModel *model15 = [HomePageCellModel modelWithTitle:@"SafeArea"
+    HomePageCellModel *model16 = [HomePageCellModel modelWithTitle:@"SafeArea"
                                                           subTitle:@"SafeArea之UIView/UIScrollView/UITableView/UIWebView/UIViewController"
                                                            vcClass:[SafeAreaVC class]
                                                       navigationVC:self.navigationController];
-    HomePageCellModel *model16 = [HomePageCellModel modelWithTitle:@"生命周期"
+    HomePageCellModel *model17 = [HomePageCellModel modelWithTitle:@"生命周期"
                                                           subTitle:@"loadView/viewDidLoad/awakeFromNib/initWithCoder"
                                                            vcClass:[LifeCycleVC class]
                                                       navigationVC:self.navigationController];
-    HomePageCellModel *model17 = [HomePageCellModel modelWithTitle:@"UIStackView"
+    HomePageCellModel *model18 = [HomePageCellModel modelWithTitle:@"UIStackView"
                                                           subTitle:@"iOS9 新增的布局技术"
                                                            vcClass:[StackViewVC class]
                                                       navigationVC:self.navigationController];
-    HomePageCellModel *model18 = [HomePageCellModel modelWithTitle:@"自定义 intrinsicContentSize 视图"
+    HomePageCellModel *model19 = [HomePageCellModel modelWithTitle:@"自定义 intrinsicContentSize 视图"
                                                           subTitle:@"支持 xib/sb 也可以直接使用"
                                                            vcClass:[SmartLabelTestVC class]
                                                       navigationVC:self.navigationController];
-    HomePageCellModel *model19 = [HomePageCellModel modelWithTitle:@"layoutSubviews"
+    HomePageCellModel *model20 = [HomePageCellModel modelWithTitle:@"layoutSubviews"
                                                           subTitle:@"layoutSubviews过程剖析"
                                                            vcClass:[LayoutSubviewVC class]
                                                       navigationVC:self.navigationController];
     
-    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, model13, model14, model15, model16, model17, model18, model19, nil];
+    self.dataSourceArray = [NSArray arrayWithObjects:model1, model2, model3, model4, model5, model6, model7, model8, model9, model10, model11, model12, model13, model14, model15, model16, model17, model18, model19, model20, nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -13,6 +13,8 @@
 		330F7C0D1ED349AB0009280A /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 330F7C0B1ED349AB0009280A /* UIView+Helper.m */; };
 		33144EF61EF05059006D27AC /* UIUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33144EEA1EF05059006D27AC /* UIUtils.mm */; };
 		33144EF91EF05218006D27AC /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 33144EF81EF05218006D27AC /* NSString+Size.m */; };
+		3337F3D5286FDF7200769C92 /* ScrollViewAutoLayout2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3337F3D3286FDF7200769C92 /* ScrollViewAutoLayout2VC.m */; };
+		3337F3D6286FDF7200769C92 /* ScrollViewAutoLayout2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3337F3D4286FDF7200769C92 /* ScrollViewAutoLayout2VC.xib */; };
 		334E25251FF8C2D4001B2704 /* AppSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 334E25241FF8C2D4001B2704 /* AppSystem.mm */; };
 		335FC7B31FC1F3620004FC53 /* SafeAreaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 335FC7B21FC1F3620004FC53 /* SafeAreaVC.m */; };
 		337EEC291EDC3F2C00EDC166 /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = 337EEC281EDC3F2C00EDC166 /* NSObject+DLIntrospection.m */; };
@@ -111,6 +113,9 @@
 		33144EEB1EF05059006D27AC /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		33144EF71EF05218006D27AC /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		33144EF81EF05218006D27AC /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		3337F3D2286FDF7200769C92 /* ScrollViewAutoLayout2VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewAutoLayout2VC.h; sourceTree = "<group>"; };
+		3337F3D3286FDF7200769C92 /* ScrollViewAutoLayout2VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewAutoLayout2VC.m; sourceTree = "<group>"; };
+		3337F3D4286FDF7200769C92 /* ScrollViewAutoLayout2VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollViewAutoLayout2VC.xib; sourceTree = "<group>"; };
 		334E25231FF8C2D4001B2704 /* AppSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSystem.h; sourceTree = "<group>"; };
 		334E25241FF8C2D4001B2704 /* AppSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppSystem.mm; sourceTree = "<group>"; };
 		335FC7B11FC1F3620004FC53 /* SafeAreaVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeAreaVC.h; sourceTree = "<group>"; };
@@ -591,6 +596,9 @@
 				B56DDD151EF0DE4400997B06 /* ScrollViewAutoLayoutVC.h */,
 				B56DDD161EF0DE4400997B06 /* ScrollViewAutoLayoutVC.m */,
 				B56DDD171EF0DE4400997B06 /* ScrollViewAutoLayoutVC.xib */,
+				3337F3D2286FDF7200769C92 /* ScrollViewAutoLayout2VC.h */,
+				3337F3D3286FDF7200769C92 /* ScrollViewAutoLayout2VC.m */,
+				3337F3D4286FDF7200769C92 /* ScrollViewAutoLayout2VC.xib */,
 			);
 			path = ScrollViewAutoLayoutVC;
 			sourceTree = "<group>";
@@ -813,6 +821,7 @@
 				B56DDD5B1EF0E2D000997B06 /* AutoLayoutTextViewCell.xib in Resources */,
 				B51F58181FC326BC00D91A49 /* MJRefresh.bundle in Resources */,
 				B56DDD611EF0E2D000997B06 /* ManualLayoutLabelCell.xib in Resources */,
+				3337F3D6286FDF7200769C92 /* ScrollViewAutoLayout2VC.xib in Resources */,
 				B56DDD571EF0E2D000997B06 /* AutoLayoutLabelCell.xib in Resources */,
 				B56DDD651EF0E2D000997B06 /* ManualLayoutTextViewCell.xib in Resources */,
 				B56DDD1F1EF0DEB700997B06 /* SizeClassesVC.xib in Resources */,
@@ -902,6 +911,7 @@
 				B56DDCCE1EF0D5BD00997B06 /* AutoresizingMaskVC.m in Sources */,
 				B56DDD0D1EF0DD0100997B06 /* AutoLayoutAPIVC.m in Sources */,
 				B56DDD2D1EF0E1A600997B06 /* CustomiseDemoView.m in Sources */,
+				3337F3D5286FDF7200769C92 /* ScrollViewAutoLayout2VC.m in Sources */,
 				B50394D81EEE71E00016FA97 /* HomePageVC.m in Sources */,
 				335FC7B31FC1F3620004FC53 /* SafeAreaVC.m in Sources */,
 				B51F581A1FC326BC00D91A49 /* MJRefreshConst.m in Sources */,
