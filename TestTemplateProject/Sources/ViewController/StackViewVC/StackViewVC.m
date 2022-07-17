@@ -28,31 +28,32 @@
 
     if (IOS9_OR_LATER) {
         UIStackView *stackView = [UIStackView new];
+        stackView.backgroundColor = [UIColor colorWithWhite:0.5 alpha:1];
         // UILayoutConstraintAxisVertical、UILayoutConstraintAxisHorizontal
         stackView.axis = UILayoutConstraintAxisHorizontal;
-        // UIStackViewAlignmentFill、UIStackViewAlignmentLeading、UIStackViewAlignmentTop = UIStackViewAlignmentLeading、UIStackViewAlignmentFirstBaseline、UIStackViewAlignmentCenter、UIStackViewAlignmentCenter、UIStackViewAlignmentBottom = UIStackViewAlignmentTrailing、UIStackViewAlignmentLastBaseline
-        stackView.alignment = UIStackViewAlignmentLastBaseline;
+        // UIStackViewAlignmentFill、UIStackViewAlignmentLeading、UIStackViewAlignmentTop = UIStackViewAlignmentLeading、UIStackViewAlignmentFirstBaseline、UIStackViewAlignmentCenter、UIStackViewAlignmentBottom = UIStackViewAlignmentTrailing、UIStackViewAlignmentLastBaseline
+        stackView.alignment = UIStackViewAlignmentLastBaseline;//UIStackViewAlignmentLastBaseline;
         // UIStackViewDistributionFill、UIStackViewDistributionFillEqually、UIStackViewDistributionFillProportionally、UIStackViewDistributionEqualSpacing、UIStackViewDistributionEqualCentering
-        stackView.distribution = UIStackViewDistributionEqualCentering;
+        stackView.distribution = UIStackViewDistributionEqualCentering;//UIStackViewDistributionFillEqually;
         stackView.spacing = 10;
 
         UILabel *labelOne = [UILabel new];
         labelOne.textColor = [UIColor redColor];
         labelOne.backgroundColor = [UIColor greenColor];
         labelOne.font = [UIFont systemFontOfSize:10];
-        labelOne.text = @"labelOne";
+        labelOne.text = @"labelOne g";
 
         UILabel *labelTwo = [UILabel new];
         labelTwo.textColor = [UIColor greenColor];
         labelTwo.backgroundColor = [UIColor blueColor];
         labelTwo.font = [UIFont systemFontOfSize:20];
-        labelTwo.text = @"labelTwo";
+        labelTwo.text = @"labelTwo g";
 
         UILabel *labelThree = [UILabel new];
         labelThree.textColor = [UIColor blueColor];
         labelThree.backgroundColor = [UIColor redColor];
-        labelThree.font = [UIFont systemFontOfSize:30];
-        labelThree.text = @"labelThree";
+        labelThree.font = [UIFont systemFontOfSize:15];
+        labelThree.text = @"labelThree g";
 
         [stackView addArrangedSubview:labelOne];
         [stackView addArrangedSubview:labelTwo];
@@ -61,8 +62,8 @@
         [self.view addSubview:stackView];
         [stackView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.top.equalTo(@10);
-            make.width.mas_equalTo(400);  // 测试 UIStackViewDistributionFillProportionally、UIStackViewDistributionEqualSpacing、UIStackViewDistributionEqualCentering 时用到
-            //make.height.mas_equalTo(100);
+            make.width.mas_equalTo(300);  // 测试 UIStackViewDistributionFillProportionally、UIStackViewDistributionEqualSpacing、UIStackViewDistributionEqualCentering 时用到
+            make.height.mas_equalTo(100);
         }];
     }
 }

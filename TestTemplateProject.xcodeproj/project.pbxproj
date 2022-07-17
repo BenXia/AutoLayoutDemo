@@ -362,8 +362,8 @@
 				33A2B9D91FEF64A800AE7FC5 /* LifeCycleVC */,
 				33B906BE1FF8F04800921439 /* StackViewVC */,
 				33B906C41FF9236600921439 /* CustomIntrinsicContentSizeView */,
-				33A2B9DA1FEF64A800AE7FC5 /* PlaygroundVC */,
 				B55A59E1257A30540084587A /* LayoutSubviewVC */,
+				33A2B9DA1FEF64A800AE7FC5 /* PlaygroundVC */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";

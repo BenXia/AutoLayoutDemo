@@ -49,7 +49,7 @@
     }
     
     // 1.SafeArea 之 UIView
-//    [self initUIViewRelated];
+    [self initUIViewRelated];
     
     // 2.SafeArea 之 UIScrollView
 //    [self initUIScrollViewRelated];
@@ -59,7 +59,7 @@
     
     // 4.SafeArea 之 UIWebView/WKWebView
 //    [self initUIWebViewRelated];
-    [self initWKWebViewRelated];
+//    [self initWKWebViewRelated];
 
     // 5.SafeArea 之 UIViewController
 //    [self initUIViewControllerRelated];
@@ -75,17 +75,17 @@
     [super viewDidLayoutSubviews];
     
     // 1.SafeArea 之 UIView
-    //[self postDidLayoutUIViewRelated];
+    [self postDidLayoutUIViewRelated];
     
     // 2.SafeArea 之 UIScrollView
-    //[self postDidLayoutUIScrollViewRelated];
+//    [self postDidLayoutUIScrollViewRelated];
     
     // 3.SafeArea 之 UITableView
-    //[self postDidLayoutUITableViewRelated];
+//    [self postDidLayoutUITableViewRelated];
     
     // 4.SafeArea 之 UIWebView/WKWebView
 //    [self postDidLayoutUIWebViewRelated];
-    [self postDidLayoutWKWebViewRelated];
+//    [self postDidLayoutWKWebViewRelated];
     
     // 5.SafeArea 之 UIViewController
 //    [self postDidLayoutUIViewControllerRelated];
@@ -169,7 +169,7 @@
 #pragma mark - UITableView related
 
 - (void)initUITableViewRelated {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 10, kScreenWidth - 20, kScreenHeight - 88 - 20)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 10, kScreenWidth - 20, kScreenHeight - 88 - 20) style:UITableViewStylePlain];
     self.tableView.backgroundColor = [UIColor blueColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
@@ -182,14 +182,15 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.view addSubview:self.tableView];
     
     @weakify(self);
     if (@available(iOS 11.0, *)) {
         NSLayoutConstraint *top = [self.tableView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor];
-        NSLayoutConstraint *bottom = [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor];
-        //NSLayoutConstraint *bottom = [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor];
+        //NSLayoutConstraint *bottom = [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor];
+        NSLayoutConstraint *bottom = [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor];
         NSLayoutConstraint *left = [self.tableView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor];
         NSLayoutConstraint *right = [self.tableView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor];
         [NSLayoutConstraint activateConstraints:@[top, bottom, left, right]];
@@ -219,6 +220,14 @@
     self.tableView.footerPullToRefreshText = @"上拉可以加载更多数据了";
     self.tableView.footerReleaseToRefreshText = @"松开马上加载更多数据了";
     self.tableView.footerRefreshingText = @"正在加载中";
+    
+    self.tableView.estimatedSectionHeaderHeight = 0;
+    self.tableView.estimatedSectionFooterHeight = 0;
+    self.tableView.estimatedRowHeight = 0;
+    
+    NSLog (@"self.tableView.contentInset : %@, self.tableView.adjustedContentInset: %@, self.tableView.bounds: %@", NSStringFromUIEdgeInsets(self.tableView.contentInset), NSStringFromUIEdgeInsets(self.tableView.adjustedContentInset),
+        NSStringFromCGRect(self.tableView.bounds));
+    
     
 //    if (@available(iOS 11.0, *)) {
 //        NSLog (@"self.tableView.contentInsetAdjustmentBehavior : %d", self.tableView.contentInsetAdjustmentBehavior);
@@ -286,11 +295,11 @@
 }
 
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return [UIView new];
+    return [UITableViewHeaderFooterView new];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    return [UIView new];
+    return [UITableViewHeaderFooterView new];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -364,7 +373,7 @@
 //        }];
 //    }
     
-    [self.uiWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.csdn.net"]]];
+    [self.uiWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
 }
 
 - (void)initWKWebViewRelated {
@@ -424,7 +433,7 @@
         }];
     }
     
-    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.csdn.net"]]];
+    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
 }
 
 - (void)postDidLayoutUIWebViewRelated {

@@ -81,7 +81,7 @@
 #pragma mark - IBActions
 
 - (IBAction)didClickChangeFrameButtonAction:(id)sender {
-    self.viewA.frame = CGRectMake(50, 300, 300, 400);
+    self.viewA.frame = CGRectMake(50, 300, 200, 200);
     
 //    [self.view setNeedsUpdateConstraints];
 }
