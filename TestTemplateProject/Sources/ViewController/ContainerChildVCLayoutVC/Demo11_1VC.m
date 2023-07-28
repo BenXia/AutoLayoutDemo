@@ -23,7 +23,8 @@
     // Do any additional setup after loading the view from its nib.
     
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
-        self.edgesForExtendedLayout = UIRectEdgeNone; // UIRectEdgeTop;
+        self.edgesForExtendedLayout = UIRectEdgeTop;
+//        self.edgesForExtendedLayout = UIRectEdgeNone; // UIRectEdgeTop;
 //        self.edgesForExtendedLayout = UIRectEdgeLeft | UIRectEdgeRight;
 //        self.edgesForExtendedLayout = UIRectEdgeBottom;
     }

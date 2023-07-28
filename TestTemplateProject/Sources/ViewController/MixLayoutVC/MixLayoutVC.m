@@ -32,7 +32,7 @@
     self.view.translatesAutoresizingMaskIntoConstraints = YES;
     self.viewA.frame = CGRectMake(50, 100, 269, 361);
     self.viewA.translatesAutoresizingMaskIntoConstraints = NO;   // Notice:影响的是自己宽高或其他super view的约束会不生效
-    
+
     NSLayoutConstraint *contentLeft = [NSLayoutConstraint constraintWithItem:self.viewA
                                                                    attribute:NSLayoutAttributeLeft
                                                                    relatedBy:NSLayoutRelationEqual
@@ -40,13 +40,13 @@
                                                                    attribute:NSLayoutAttributeLeft
                                                                   multiplier:1
                                                                     constant:50];
-    
+
     NSLayoutConstraint *contentRight = [NSLayoutConstraint constraintWithItem:self.viewA attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1 constant:-50];
-    
+
     NSLayoutConstraint *contentTop = [NSLayoutConstraint constraintWithItem:self.viewA attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:200];
-    
+
     NSLayoutConstraint *contentBottom = [NSLayoutConstraint constraintWithItem:self.viewA attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:-50];
-    
+
     [self.view addConstraints:@[contentLeft, contentRight, contentTop, contentBottom]];
 }
 
@@ -59,9 +59,9 @@
     [self.viewA addSubview:self.viewB];
     self.viewB.translatesAutoresizingMaskIntoConstraints = NO;   // Notice:
     NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:self.viewB attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:200];
-    
+
     NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:self.viewB attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:200];
-    
+
     NSLayoutConstraint *contentLeft = [NSLayoutConstraint constraintWithItem:self.viewA
                                                                    attribute:NSLayoutAttributeLeft
                                                                    relatedBy:NSLayoutRelationEqual
@@ -71,10 +71,10 @@
                                                                     constant:-30];
 
     NSLayoutConstraint *contentTop = [NSLayoutConstraint constraintWithItem:self.viewA attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.viewB attribute:NSLayoutAttributeTop multiplier:1 constant:-30];
-    
+
     [self.viewB addConstraints:@[widthConstraint, heightConstraint]];
     [self.viewA addConstraints:@[contentLeft, contentTop]];
-    
+
     [self.view layoutIfNeeded];
 }
 

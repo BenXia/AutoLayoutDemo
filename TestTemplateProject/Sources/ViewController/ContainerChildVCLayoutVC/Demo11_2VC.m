@@ -31,6 +31,9 @@
     
     // 如果设置了edgesForExtendedLayout属性不含UIRectEdgeTop时，automaticallyAdjustsScrollViewInsets则没用
     if (@available(iOS 11.0, *)) {
+//        self.scrollViewOne.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+//        self.scrollViewOne.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        
         self.scrollViewOne.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
         self.scrollViewTwo.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAlways;
     } else {

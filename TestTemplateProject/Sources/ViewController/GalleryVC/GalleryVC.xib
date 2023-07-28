@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,7 +21,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="187.5" height="333.5"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picA" translatesAutoresizingMaskIntoConstraints="NO" id="Ucw-xO-FT0">
-                            <rect key="frame" x="20" y="20" width="147.5" height="264.5"/>
+                            <rect key="frame" x="20" y="20.5" width="147.5" height="263.5"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3I-lJ-sYH">
                             <rect key="frame" x="88" y="304.5" width="12" height="21"/>
@@ -46,10 +44,10 @@
                     <rect key="frame" x="187.5" y="0.0" width="187.5" height="333.5"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picB" translatesAutoresizingMaskIntoConstraints="NO" id="O2g-No-zaV">
-                            <rect key="frame" x="20" y="20" width="147.5" height="265.5"/>
+                            <rect key="frame" x="20" y="20.5" width="147.5" height="264.5"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w3-kq-kf3">
-                            <rect key="frame" x="88.5" y="304.5" width="11" height="21"/>
+                            <rect key="frame" x="89" y="304.5" width="11" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -69,10 +67,10 @@
                     <rect key="frame" x="0.0" y="333.5" width="187.5" height="333.5"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picC" translatesAutoresizingMaskIntoConstraints="NO" id="J4M-Sg-iWy">
-                            <rect key="frame" x="20" y="20" width="147.5" height="264.5"/>
+                            <rect key="frame" x="20" y="20" width="147.5" height="264"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGm-0G-Qbt">
-                            <rect key="frame" x="88.5" y="304.5" width="12" height="21"/>
+                            <rect key="frame" x="88" y="304.5" width="12" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -92,7 +90,7 @@
                     <rect key="frame" x="187.5" y="333.5" width="187.5" height="333.5"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picD" translatesAutoresizingMaskIntoConstraints="NO" id="8at-vi-7OV">
-                            <rect key="frame" x="20" y="20" width="147.5" height="264.5"/>
+                            <rect key="frame" x="20" y="20" width="147.5" height="264"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swC-7c-4zV">
                             <rect key="frame" x="87.5" y="304.5" width="12" height="21"/>
@@ -150,7 +148,7 @@
                 <constraint firstItem="PDy-lK-dSO" firstAttribute="height" secondItem="3v7-2f-gdn" secondAttribute="height" id="rxZ-Gz-8Vm"/>
                 <constraint firstItem="VYp-1J-xSo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vLw-xU-jdQ"/>
             </constraints>
-            <point key="canvasLocation" x="279" y="322"/>
+            <point key="canvasLocation" x="425.95419847328242" y="226.7605633802817"/>
         </view>
     </objects>
     <resources>
@@ -159,9 +157,4 @@
         <image name="picC" width="144" height="158"/>
         <image name="picD" width="230" height="219"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>
