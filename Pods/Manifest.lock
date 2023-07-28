@@ -1,5 +1,5 @@
 PODS:
-  - IQKeyboardManager (5.0.7)
+  - IQKeyboardManager (6.5.6)
   - Masonry (1.1.0)
   - ReactiveObjC (3.0.0)
   - SDWebImage (4.2.2):
@@ -12,12 +12,19 @@ DEPENDENCIES:
   - ReactiveObjC
   - SDWebImage
 
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManager
+    - Masonry
+    - ReactiveObjC
+    - SDWebImage
+
 SPEC CHECKSUMS:
-  IQKeyboardManager: 0bfa4607d39924116b5c0c8b55b5d789288b5cba
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
 
 PODFILE CHECKSUM: 75f2a513b905ff7d79d4c5bfff3ddc813189270a
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.9.1
