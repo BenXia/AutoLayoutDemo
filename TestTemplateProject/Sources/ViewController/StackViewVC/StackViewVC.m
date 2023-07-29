@@ -34,7 +34,7 @@
         // UIStackViewAlignmentFill、UIStackViewAlignmentLeading、UIStackViewAlignmentTop = UIStackViewAlignmentLeading、UIStackViewAlignmentFirstBaseline、UIStackViewAlignmentCenter、UIStackViewAlignmentBottom = UIStackViewAlignmentTrailing、UIStackViewAlignmentLastBaseline
         stackView.alignment = UIStackViewAlignmentLastBaseline;//UIStackViewAlignmentLastBaseline;
         // UIStackViewDistributionFill、UIStackViewDistributionFillEqually、UIStackViewDistributionFillProportionally、UIStackViewDistributionEqualSpacing、UIStackViewDistributionEqualCentering
-        stackView.distribution = UIStackViewDistributionEqualCentering;//UIStackViewDistributionFillEqually;
+        stackView.distribution = UIStackViewDistributionFillEqually;//UIStackViewDistributionFillEqually; //UIStackViewDistributionEqualCentering;//
         stackView.spacing = 10;
 
         UILabel *labelOne = [UILabel new];

@@ -37,7 +37,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.edgesForExtendedLayout = UIRectEdgeTop;
     }
     
     BOOL IS_SCREEN_58_INCH = ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO);
@@ -49,7 +49,7 @@
     }
     
     // 1.SafeArea 之 UIView
-    [self initUIViewRelated];
+//    [self initUIViewRelated];
     
     // 2.SafeArea 之 UIScrollView
 //    [self initUIScrollViewRelated];
@@ -62,7 +62,7 @@
 //    [self initWKWebViewRelated];
 
     // 5.SafeArea 之 UIViewController
-//    [self initUIViewControllerRelated];
+    [self initUIViewControllerRelated];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -75,7 +75,7 @@
     [super viewDidLayoutSubviews];
     
     // 1.SafeArea 之 UIView
-    [self postDidLayoutUIViewRelated];
+//    [self postDidLayoutUIViewRelated];
     
     // 2.SafeArea 之 UIScrollView
 //    [self postDidLayoutUIScrollViewRelated];
@@ -88,7 +88,7 @@
 //    [self postDidLayoutWKWebViewRelated];
     
     // 5.SafeArea 之 UIViewController
-//    [self postDidLayoutUIViewControllerRelated];
+    [self postDidLayoutUIViewControllerRelated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -103,6 +103,17 @@
     self.redView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, kScreenWidth - 20, 300)];
     self.redView.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.redView];
+    
+    self.redView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.redView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+//    NSLayoutConstraint *top = [self.redView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor];
+//    NSLayoutConstraint *bottom = [self.redView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor];
+////        NSLayoutConstraint *bottom = [self.redView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor];
+//    NSLayoutConstraint *left = [self.redView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor];
+//    NSLayoutConstraint *right = [self.redView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor];
+//    [NSLayoutConstraint activateConstraints:@[top, bottom, left, right]];
 
     self.greenView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, kScreenWidth - 40, 280)];
     self.greenView.backgroundColor = [UIColor greenColor];
@@ -110,6 +121,45 @@
 }
 
 - (void)postDidLayoutUIViewRelated {
+//    iPhone14全系屏幕尺寸适配小记
+//    随着新设备陆续到大家的手中
+//    多多少少会遇到一些App显示的略显奇怪的地方
+//    参考工作中项目的适配踩坑 这里分享一下这一系列屏幕尺寸的变化 尤其是安全区域由于灵动岛的加入而发生的一点小变化 具体数据罗列一下 方便大家记录
+//    iPhone14
+//    **[APP_SIZE]: 屏幕宽:390.0 高: 844.0**
+//    **[屏幕安全区] UIEdgeInsets(top: 47.0, left: 0.0, bottom: 34.0, right: 0.0)**
+//    **[状态栏高度] 高度:Optional(47.0) 宽度:Optional(390.0)**
+//    iPhone14 Plus
+//    **[APP_SIZE]: 屏幕宽:428.0 高: 926.0**
+//    **[屏幕安全区] UIEdgeInsets(top: 47.0, left: 0.0, bottom: 34.0, right: 0.0)**
+//    **[状态栏高度] 高度:Optional(47.0) 宽度:Optional(428.0)**
+//    iPhone14 Pro
+//    **[APP_SIZE]: 屏幕宽:393.0 高: 852.0**
+//    **[屏幕安全区] UIEdgeInsets(top: 59.0, left: 0.0, bottom: 34.0, right: 0.0)**
+//    **[状态栏高度] 高度:Optional(54.0) 宽度:Optional(393.0)**
+//    iPhone14 Pro Max
+//    **[APP_SIZE]: 屏幕宽:430.0 高: 932.0**
+//    **[屏幕安全区] UIEdgeInsets(top: 59.0, left: 0.0, bottom: 34.0, right: 0.0)**
+//    **[状态栏高度] 高度:Optional(54.0) 宽度:Optional(430.0)**
+    
+    CGFloat height = 0.0;//最终高度存储容器
+    if (@available(iOS 13.0, *)) {
+        CGFloat topHeight = [UIApplication sharedApplication].windows.firstObject.safeAreaInsets.top;
+        height = topHeight ? topHeight : 20.0;
+    }else {
+        height = [[UIApplication sharedApplication] statusBarFrame].size.height;
+    }
+    NSLog(@"status bar height: %f\n", height);
+    
+//    //Swift 获取方式
+//    var height = 0.0
+//    if #available(iOS 13.0, *) {
+//        let topHeight = UIApplication.shared.windows.first?.safeAreaInsets.top
+//        height = topHeight ?? 20
+//    }else{
+//        height = UIApplication.shared.statusBarFrame.size.height
+//    }
+    
     if (@available(iOS 11.0, *)) {
         NSLog (@"self.view.directionalLayoutMargins: %@\nlayoutMargins: %@\nsafeAreaInsets: %@", NSStringFromDirectionalEdgeInsets(self.view.directionalLayoutMargins), NSStringFromUIEdgeInsets(self.view.layoutMargins), NSStringFromUIEdgeInsets(self.view.safeAreaInsets));
         NSLog (@"redView.directionalLayoutMargins: %@\nlayoutMargins: %@\nsafeAreaInsets: %@", NSStringFromDirectionalEdgeInsets(self.redView.directionalLayoutMargins), NSStringFromUIEdgeInsets(self.redView.layoutMargins),
@@ -119,8 +169,10 @@
         self.view.insetsLayoutMarginsFromSafeArea = NO;
         NSLog (@"self.view.directionalLayoutMargins: %@\nlayoutMargins: %@\nsafeAreaInsets: %@", NSStringFromDirectionalEdgeInsets(self.view.directionalLayoutMargins), NSStringFromUIEdgeInsets(self.view.layoutMargins),
             NSStringFromUIEdgeInsets(self.view.safeAreaInsets));
+        self.redView.insetsLayoutMarginsFromSafeArea = NO;
         NSLog (@"redView.directionalLayoutMargins: %@\nlayoutMargins: %@\nsafeAreaInsets: %@", NSStringFromDirectionalEdgeInsets(self.redView.directionalLayoutMargins), NSStringFromUIEdgeInsets(self.redView.layoutMargins),
             NSStringFromUIEdgeInsets(self.redView.safeAreaInsets));
+        self.greenView.insetsLayoutMarginsFromSafeArea = NO;
         NSLog (@"greenView.directionalLayoutMargins: %@\nlayoutMargins: %@\nsafeAreaInsets: %@", NSStringFromDirectionalEdgeInsets(self.greenView.directionalLayoutMargins), NSStringFromUIEdgeInsets(self.greenView.layoutMargins),
             NSStringFromUIEdgeInsets(self.greenView.safeAreaInsets));
     }
@@ -251,10 +303,13 @@
 - (void)postDidLayoutUITableViewRelated {
     if (@available(iOS 11.0, *)) {
         NSLog (@"self.tableView.contentInsetAdjustmentBehavior : %zd", self.tableView.contentInsetAdjustmentBehavior);
-        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         NSLog (@"self.tableView.contentInsetAdjustmentBehavior : %zd", self.tableView.contentInsetAdjustmentBehavior);
         
         NSLog (@"self.tableView.insetsContentViewsToSafeArea: %d", self.tableView.insetsContentViewsToSafeArea);
+        
+        NSLog (@"self.tableView.contentInset : %@, self.tableView.adjustedContentInset: %@, self.tableView.bounds: %@", NSStringFromUIEdgeInsets(self.tableView.contentInset), NSStringFromUIEdgeInsets(self.tableView.adjustedContentInset),
+            NSStringFromCGRect(self.tableView.bounds));
     }
 }
 
@@ -411,27 +466,31 @@
 //        make.edges.equalTo(self.webViewContentView);
 //    }];
     
-    @weakify(self);
-    if (@available(iOS 11.0, *)) {
-        NSLayoutConstraint *top = [self.wkWebView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor];
-        //NSLayoutConstraint *bottom = [self.wkWebView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor];
-        NSLayoutConstraint *bottom = [self.wkWebView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor];
-        NSLayoutConstraint *left = [self.wkWebView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor];
-        NSLayoutConstraint *right = [self.wkWebView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor];
-        [NSLayoutConstraint activateConstraints:@[top, bottom, left, right]];
-    } else {
-        [self.wkWebView mas_makeConstraints:^(MASConstraintMaker *make) {
-            @strongify(self);
-            if (@available(iOS 11.0, *)) {    // 只有走这儿 WKWebView 的 frame 才会上去
-                make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
-                make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
-                make.left.equalTo(self.view.mas_safeAreaLayoutGuideLeft);
-                make.right.equalTo(self.view.mas_safeAreaLayoutGuideRight);
-            } else {
-                make.edges.equalTo(self.view);
-            }
-        }];
-    }
+    [self.wkWebView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+//    @weakify(self);
+//    if (@available(iOS 11.0, *)) {
+//        NSLayoutConstraint *top = [self.wkWebView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor];
+//        //NSLayoutConstraint *bottom = [self.wkWebView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor];
+//        NSLayoutConstraint *bottom = [self.wkWebView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor];
+//        NSLayoutConstraint *left = [self.wkWebView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor];
+//        NSLayoutConstraint *right = [self.wkWebView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor];
+//        [NSLayoutConstraint activateConstraints:@[top, bottom, left, right]];
+//    } else {
+//        [self.wkWebView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            @strongify(self);
+//            if (@available(iOS 11.0, *)) {    // 只有走这儿 WKWebView 的 frame 才会上去
+//                make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
+//                make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+//                make.left.equalTo(self.view.mas_safeAreaLayoutGuideLeft);
+//                make.right.equalTo(self.view.mas_safeAreaLayoutGuideRight);
+//            } else {
+//                make.edges.equalTo(self.view);
+//            }
+//        }];
+//    }
     
     [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
 }

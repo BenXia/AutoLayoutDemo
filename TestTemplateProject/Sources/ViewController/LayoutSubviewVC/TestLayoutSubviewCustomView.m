@@ -23,6 +23,8 @@
     
     CGRect currentFrame = self.frame;
     self.frame = CGRectMake(currentFrame.origin.x, currentFrame.origin.y, currentFrame.size.width + 1, currentFrame.size.height + 1);
+    
+//    [self setNeedsLayout];
 }
 
 @end
