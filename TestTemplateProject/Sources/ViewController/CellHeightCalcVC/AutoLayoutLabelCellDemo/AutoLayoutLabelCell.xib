@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="2048" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AutoLayoutLabelCell" rowHeight="99" id="KGk-i7-Jjw" customClass="AutoLayoutLabelCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AutoLayoutLabelCell" rowHeight="0.0" id="KGk-i7-Jjw" customClass="AutoLayoutLabelCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picA" translatesAutoresizingMaskIntoConstraints="NO" id="XF7-MU-gtu">
-                        <rect key="frame" x="8" y="11" width="45" height="45"/>
+                        <rect key="frame" x="8" y="15" width="45" height="45"/>
+                        <color key="backgroundColor" red="1" green="0.46274509800000002" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="45" id="OpV-VR-7Nk"/>
                             <constraint firstAttribute="width" constant="45" id="hA6-8T-a2O"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890xx" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaE-fH-SKs">
-                        <rect key="frame" x="61" y="11" width="251" height="77"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaE-fH-SKs">
+                        <rect key="frame" x="61" y="15" width="251" height="122"/>
                         <color key="backgroundColor" red="0.22352941179999999" green="0.41568627450000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <string key="text">1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890</string>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="YaE-fH-SKs" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="71n-sM-iro"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XF7-MU-gtu" secondAttribute="bottom" constant="8" id="5Hk-F5-57Z"/>
+                    <constraint firstItem="XF7-MU-gtu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="OXA-Tw-3Lh"/>
                     <constraint firstItem="XF7-MU-gtu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="SbN-tZ-1sj"/>
-                    <constraint firstItem="XF7-MU-gtu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Xi2-yE-X9m"/>
                     <constraint firstAttribute="trailing" secondItem="YaE-fH-SKs" secondAttribute="trailing" constant="8" id="mhT-h1-9XH"/>
                     <constraint firstItem="YaE-fH-SKs" firstAttribute="leading" secondItem="XF7-MU-gtu" secondAttribute="trailing" constant="8" id="mhn-2r-z0e"/>
-                    <constraint firstItem="YaE-fH-SKs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="n2b-R7-3XT"/>
-                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="XF7-MU-gtu" secondAttribute="bottom" constant="8" id="zwl-W8-U0z"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="YaE-fH-SKs" secondAttribute="bottom" priority="200" id="tCe-Tf-mVP"/>
+                    <constraint firstItem="YaE-fH-SKs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="xU9-CL-E0A"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

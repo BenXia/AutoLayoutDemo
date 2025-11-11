@@ -41,6 +41,7 @@
     self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:@"AutoLayoutLabelCell"];
     
     self.tableDatasourceArray = @[@"1\n2\n3\n4\n5\n6", @"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890xx", @"1\n2", @"1\n2\n3", @"1"];
+
     // @"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901"
 }
 
@@ -98,7 +99,7 @@
     
     
     
-    //cell.titleLabel.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width - 69;
+//    cell.titleLabel.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width - 69;
     CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
 //    NSLog (@"size: %@", NSStringFromCGSize(size));
     
