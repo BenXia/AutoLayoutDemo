@@ -107,6 +107,7 @@
 		330F7C0A1ED349AB0009280A /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helper.h"; sourceTree = "<group>"; };
 		330F7C0B1ED349AB0009280A /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helper.m"; sourceTree = "<group>"; };
 		330F7ECC1ED352250009280A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3312DAC92EE53D1D00F78BCA /* contentInsetAdjustmentBehavior、automaticallyAdjustsScrollViewInsets、edgesForExtendedLayout.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "contentInsetAdjustmentBehavior、automaticallyAdjustsScrollViewInsets、edgesForExtendedLayout.md"; sourceTree = "<group>"; };
 		33144ED11EF04F1D006D27AC /* commonConstDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commonConstDef.h; sourceTree = "<group>"; };
 		33144ED21EF04F1D006D27AC /* macrodef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macrodef.h; sourceTree = "<group>"; };
 		33144ED31EF04F1D006D27AC /* typedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = typedef.h; sourceTree = "<group>"; };
@@ -720,6 +721,7 @@
 		B56DDD681EF0E33A00997B06 /* ContainerChildVCLayoutVC */ = {
 			isa = PBXGroup;
 			children = (
+				3312DAC92EE53D1D00F78BCA /* contentInsetAdjustmentBehavior、automaticallyAdjustsScrollViewInsets、edgesForExtendedLayout.md */,
 				B56DDD691EF0E33A00997B06 /* Demo11_1VC.h */,
 				B56DDD6A1EF0E33A00997B06 /* Demo11_1VC.m */,
 				B56DDD6B1EF0E33A00997B06 /* Demo11_1VC.xib */,
